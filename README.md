@@ -1,13 +1,11 @@
 # OCTemplate
-基于 Objective-C 实现的框架设计，YTKNetwork网络层 + AOP替代基类 + MVVM + ReactiveObjC + JLRoutes组件化
+基于 Objective-C 实现的框架设计，YTKNetwork网络层 + AOP替代基类 + MVVM + ReactiveObjC + JLRoutes组件化 🤖
 
-使用 Eureka 让你换个姿势写 Table 🤖
+> 我理解的框架，就好比计算机的主板，房屋的建筑骨架，框架搭的好，能直接影响开发者的开发心情，更能让项目健壮性和扩展性大大增强。
 
-> TableView 应该是项目开发中最常用的部件了，如果你感觉系统的原生方式语法较为‘冗余’，那款三方库一定很适合你。
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/80191729.jpg)
 
-![](http://og1yl0w9z.bkt.clouddn.com/17-12-18/79869793.jpg)
-
-![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective-C-blue.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
 
 ### 🤖 要求
@@ -35,183 +33,200 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'Eureka'
+  # 提示组件框架
+  pod 'SVProgressHUD', '~> 2.2.2'
+  # 网络请求框架
+  pod 'YTKNetwork', '~> 2.0.3'
+  # AOP面向切面
+  pod 'Aspects', '~> 1.4.1'
+  # 响应函数式框架
+  pod 'ReactiveObjC', '~> 3.0.0'
+  # 路由组件化解耦
+  pod 'JLRoutes', '~> 2.0.5'
+  # 提示组件框架
+  pod 'SVProgressHUD', '~> 2.2.2'
+  # 自动布局
+  pod 'Masonry', '~> 1.0.2'
 ```
 
-#### 其他操作
 
-另外还需要在Target->工程名->Build Settings->Search Paths->User Header Search Paths处添加Eureka所在的目录：
+### 🛠 框架介绍
 
-![](http://og1yl0w9z.bkt.clouddn.com/17-12-18/68332908.jpg)
+#### AOP 模式（Aspects-RunTime 代替基类）+ Category 方法交换
 
+采用AOP思想，使用 Aspects 来完成替换 Controller ，View，ViewModel基类，和基类说拜拜
 
+Casa反革命工程师 iOS应用架构谈 view层的组织和调用方案 博客中提到一个疑问
+是否有必要让业务方统一派生ViewController
+Casa大神回答是NO，原因如下
+1. 使用派生比不使用派生更容易增加业务方的使用成本
+2. 不使用派生手段一样也能达到统一设置的目的
+对于第一点，从 集成成本 ，上手成本 ，架构维护成本等因素入手，大神博客中也已经很详细。
 
-### 🛠 配置
+框架不需要通过继承即能够对ViewController进行统一配置。业务即使脱离环境，也能够跑完代码，ViewController一旦放入框架环境，不需要添加额外的或者只需添加少量代码，框架也能够起到相应的作用 对于本人来说 ，具备这点的吸引力，已经足够让我有尝试一番的心思了。
 
-#### 创建表单
-
-下面来创建一个最简单的表单，表单只包含一个区域和一行，点击该行可以切换到其它页面
+对于OC来说，方法拦截很容易就想到自带的黑魔法方法调配 Method Swizzling， 至于为ViewController做动态配置，自然非Category莫属了
+Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代码采用 Aspects 做方法拦截。
 
 ```Swift
-import UIKit
-import Eureka
++ (void)load {
+    [super load];
+    [FKViewControllerIntercepter sharedInstance];
+}
+// .... 单例初始化代码
 
-//ViewController继承于FormViewController
-class MyViewController: FormViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //表单form增加一个Section区域，区域名为First form
-        form +++ Section("First form")
-
-            //在区域中添加一个ButtonRow（ButtonRow为点击直接触发事件的行），行tag为Rows
-            <<< ButtonRow("Rows"){
-                //设置行标题为行tag
-                $0.title = $0.tag
-                //设置点击事件，执行名为"Main"的Segue（需在Interface Builder中自定义）
-                $0.presentationMode = .SegueName(segueName: "Main", completionCallback: nil)
-        }
-              //自定义Row，在后面会讲到
-//            <<< WeekDayRow(){
-//                $0.value = [.Monday, .Wednesday, .Friday]
-//        }
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        /* 方法拦截 */
+        // 拦截 viewDidLoad 方法
+        [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo){
+            [self _viewDidLoad:aspectInfo.instance];
+        }  error:nil];
+        
+        // 拦截 viewWillAppear:
+        [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
+            [self _viewWillAppear:animated controller:aspectInfo.instance];
+        } error:NULL];
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    return self;
 }
 ```
+至于Category已经非常熟悉了
+```Swift
+@interface UIViewController (NonBase)
 
-#### 自定义Row
+/**
+ 去Model&&表征化参数列表
+ */
+@property (nonatomic, strong) NSDictionary *params;
 
-除了使用框架自带的Row，还可以根据自己的需求自定义Row，下面以一个星期选择行为例。首先创建类WeekDayRow.Swift和nib文件WeekDaysCell.xib。
+/**
+ ViewModel 属性
+ */
+@property (nonatomic, strong) id <FKViewControllerProtocol> viewModel;
+
+#pragma mark - 通用类
+
+/**
+ 返回Controller的当前bounds
+ 
+ @param hasNav 是否有导航栏
+ @param hasTabBar 是否有tabbar
+ @return 坐标
+ */
+- (CGRect)fk_visibleBoundsShowNav:(BOOL)hasNav showTabBar:(BOOL)hasTabBar;
+
+/**
+ 隐藏键盘
+ */
+- (void)fk_hideKeyBoard;
+@end
+```
+至此，我们已经实现了不继承基类来实现对ViewController的配置，项目中的 View ViewModel 去基类原理如出一辙。
+
+#### View层采用 MVVM 设计模式，使用 ReactiveObjC 进行数据绑定
+
+*MVC*
+作为老牌思想MVC，大家早已耳熟能详，MVC素有 Massive VC之称，随着业务增加，Controller将会越来越复杂，最终Controller会变成一个"神类", 即有网络请求等代码，又充斥着大量业务逻辑，所以为Controller减负，在某些情况下变得势在必行
+
+*MVVM*
+MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部分：Model和ViewModel (注：胖Model 是指包含了一些弱业务逻辑的Model)
+胖Model实际上是为了减负 Controller 而存在的，而 MVVM 是为了拆分胖Model , 最终目的都是为了减负Controller。
+
+我们知道，苹果MVC并没有专门为网络层代码分专门的层级，按照以往习惯，大家都写在了Controller 中，这也是Controller 变Massive得元凶之一，现在我们可以将网络请求等诸如此类的代码放到ViewModel中了 （文章后半部分将会描述ViewModel中的网络请求）
+
+*数据流向*
+正常的网络请求获取数据，然后更新View自然不必多说，那么如果View产生了数据要怎么把数据给到Model，由于View不直接持有ViewModel，所以我们需要有个桥梁 ReactiveCocoa, 通过 Signal 来和 ViewModel 通信，这个过程我们使用 通知 或者 Target-Action也可以实现相同的效果，只不过没有 ReactiveCocoa 如此方便罢了
 
 ```Swift
-import Foundation
-import UIKit
-import MapKit
-import Eureka
-
-
-//MARK: WeeklyDayCell
-
-public enum WeekDay{
-    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-}
-
-public class WeekDayCell : Cell<Set<WeekDay>>, CellType{
-
-    //与nib中的7个按钮建立链接
-    @IBOutlet var sundayButton: UIButton!
-    @IBOutlet var mondayButton: UIButton!
-    @IBOutlet var tuesdayButton: UIButton!
-    @IBOutlet var wednesdayButton: UIButton!
-    @IBOutlet var thursdayButton: UIButton!
-    @IBOutlet var fridayButton: UIButton!
-    @IBOutlet var saturdayButton: UIButton!
-
-    //重写cell创建方法
-    public override func setup() {
-        height = {60}
-        row.title = nil
-        super.setup()
-        selectionStyle = .None
-
-        for subviews in contentView.subviews{
-            if let button = subviews as? UIButton{
-                //为每个按钮设置选中和未选中时的图片
-                button.setImage(UIImage(named: "check.png"), forState: .Selected)
-                button.setImage(UIImage(named: "uncheck.png"), forState: .Normal)
-                //默认情况下，按钮在被禁用时，图像会被画的颜色淡一些，设置为false是禁止此功能
-                button.adjustsImageWhenDisabled = false
-                //自定义函数，设置按钮标签与图片的位置
-                imageTopTittle(button)
+/*  View -> ViewModel 传递数据示例   */
+#pragma mark - Bind ViewModel
+- (void)bindViewModel:(id<FKViewModelProtocol>)viewModel withParams:(NSDictionary *)params {
+    if ([viewModel isKindOfClass:[FKLoginViewModel class]]){
+        
+        FKLoginViewModel *_viewModel = (FKLoginViewModel *)viewModel;
+        // 绑定账号 View -> ViewModel 传递数据 
+        @weakify(self);
+        RAC(_viewModel, userAccount) = [[self.inputTextFiled.rac_textSignal takeUntil:self.rac_prepareForReuseSignal] map:^id _Nullable(NSString * _Nullable account) {
+            
+            @strongify(self);
+            // 限制账号长度
+            if (account.length > 25) {
+                self.inputTextFiled.text = [account substringToIndex:25];
             }
-        }
-    }
-
-    //重写cell更新方法
-    public override func update() {
-        row.title = nil
-        super.update()
-        let value = row.value
-        //根据value是否包含某枚举值来设置对应按钮的选中状态
-        mondayButton.selected = value?.contains(.Monday) ?? false
-        tuesdayButton.selected = value?.contains(.Tuesday) ?? false
-        wednesdayButton.selected = value?.contains(.Wednesday) ?? false
-        thursdayButton.selected = value?.contains(.Thursday) ?? false
-        fridayButton.selected = value?.contains(.Friday) ?? false
-        saturdayButton.selected = value?.contains(.Saturday) ?? false
-        sundayButton.selected = value?.contains(.Sunday) ?? false
-
-        //设置按钮在不同状态下的透明度
-        mondayButton.alpha = row.isDisabled ? 0.6 : 1.0
-        tuesdayButton.alpha = mondayButton.alpha
-        wednesdayButton.alpha = mondayButton.alpha
-        thursdayButton.alpha = mondayButton.alpha
-        fridayButton.alpha = mondayButton.alpha
-        saturdayButton.alpha = mondayButton.alpha
-        sundayButton.alpha = mondayButton.alpha
-    }
-
-    //每个按钮的点击事件
-    @IBAction func dayTapped(sender : UIButton){
-        dayTapped(sender, day: getDayFromButton(sender))
-    }
-
-    //根据点击的按钮返回对应的枚举值
-    private func getDayFromButton(button : UIButton) -> WeekDay{
-        switch button{
-        case sundayButton:
-            return .Sunday
-        case mondayButton:
-            return .Monday
-        case tuesdayButton:
-            return .Tuesday
-        case wednesdayButton:
-            return .Wednesday
-        case thursdayButton:
-            return .Thursday
-        case fridayButton:
-            return .Friday
-        default:
-            return .Saturday
-        }
-    }
-
-    //点击改变按钮的选中状态，并从value中插入或删除对应的枚举值
-    private func dayTapped(button : UIButton, day:WeekDay){
-        button.selected = !button.selected
-        if button.selected {
-            row.value?.insert(day)
-        }
-        else{
-            row.value?.remove(day)
-        }
-    }
-
-    //设置按钮标题和图片的位置
-    private func imageTopTittle(button : UIButton){
-        guard let imageSize = button.imageView?.image?.size else{ return }
-        let spacing : CGFloat = 3.0
-        button.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width, -(imageSize.height + spacing), 0.0)
-        guard let titleLabel = button.titleLabel, let title = titleLabel.text else{ return }
-        let titleSize = title.sizeWithAttributes([NSFontAttributeName: titleLabel.font])
-        button.imageEdgeInsets = UIEdgeInsetsMake(-(titleSize.height + spacing), 0, 0, -titleSize.width)
+            return self.inputTextFiled.text;
+        }];
     }
 }
+```
 
-//MARK: WeekDayRow
+上面代码给出了View -> ViewModel 绑定的一个例子 具体一些详情，可以直接看Demo
+MVVM一些总结：
+1. View <-> C <-> ViewModel <-> Model 实际上应该称之为MVCVM
+2. Controller 将不再直接和 Model 进行绑定，而通过桥梁ViewModel
+3. 最终 Controller 的作用变成一些UI的处理逻辑，和进行View和ViewModel的绑定
+4. MVVM 和 MVC 兼容
+5. 由于多了一层 ViewModel, 会需要写一些胶水代码，所以代码量会增加
 
-public final class WeekDayRow: Row<Set<WeekDay>, WeekDayCell>, RowType{
-    //重写init方法
-    required public init(tag: String?) {
-        super.init(tag: tag)
-        displayValueFor = nil
-        cellProvider = CellProvider<WeekDayCell>(nibName: "WeekDaysCell")
+#### 网络层使用 YTKNetwork 配合 ReactiveCocoa 封装网络请求，解决如何交付数据，交付什么样的数据（去Model化)等问题
+YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络库，其实现了一套 High Level 的 API，提供了更高层次的网络访问抽象。
+
+笔者对 YTKNetwork 进行了一些封装，结合 ReactiveCocoa，并提供 reFormatter 接口对服务器响应数据重新处理，灵活交付给业务层。
+接下来，本文会回答两个问题
+1. 以什么方式将数据交付给业务层？
+2. 交付什么样的数据 ?
+对于第一个问题
+*以什么方式将数据交付给业务层？*
+虽然 iOS应用架构谈 网络层设计方案 中 Casa大神写到 尽量不要用block，应该使用代理
+的确，Block难以追踪和定位错误，容易内存泄漏， YTKNetwork 也提供代理方式回调
+
+```Swift
+@protocol YTKRequestDelegate <NSObject>
+
+@optional
+///  Tell the delegate that the request has finished successfully.
+///
+///  @param request The corresponding request.
+- (void)requestFinished:(__kindof YTKBaseRequest *)request;
+
+///  Tell the delegate that the request has failed.
+///
+///  @param request The corresponding request.
+- (void)requestFailed:(__kindof YTKBaseRequest *)request;
+
+@end
+```
+前文有说过，MVVM 并不等于 ReactiveCocoa , 但是想要体验最纯正的 ReactiveCocoa 还是Block较为酸爽，Demo中笔者两者都给出了代码, 大家可以自行选择和斟酌哈
+我们看一下 YTKNetwork 和 ReactiveCocoa 结合的代码
+
+```
+- (RACSignal *)rac_requestSignal {
+    [self stop];
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        // 请求起飞
+        [self startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+            // 成功回调
+            [subscriber sendNext:[request responseJSONObject]];
+            [subscriber sendCompleted];
+            
+        } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+            // 错误回调
+            [subscriber sendError:[request error]];
+        }];
+        
+        return [RACDisposable disposableWithBlock:^{
+            // Signal销毁 停止请求
+            [self stop];
+        }];
+    }] takeUntil:[self rac_willDeallocSignal]];
+    
+    //设置名称 便于调试
+    if (DEBUG) {
+        [signal setNameWithFormat:@"%@ -rac_xzwRequest",  RACDescription(self)];
     }
+    
+    return signal;
 }
 ```
 
