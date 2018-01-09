@@ -52,7 +52,7 @@ use_frameworks!
 ----
 ### 🛠 框架介绍
 
-#### AOP 模式（Aspects-RunTime 代替基类）+ Category 方法交换
+#### 1.AOP 模式（Aspects-RunTime 代替基类）+ Category 方法交换
 
 采用AOP思想，使用 Aspects 来完成替换 Controller ，View，ViewModel基类，和基类说拜拜
 
@@ -130,7 +130,7 @@ Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代�
 ```
 至此，我们已经实现了不继承基类来实现对ViewController的配置，项目中的 View ViewModel 去基类原理如出一辙。
 
-#### View层采用 MVVM 设计模式，使用 ReactiveObjC 进行数据绑定
+#### 2.View层采用 MVVM 设计模式，使用 ReactiveObjC 进行数据绑定
 
 *-MVC-*
 
@@ -178,7 +178,7 @@ MVVM一些总结：
 4. MVVM 和 MVC 兼容
 5. 由于多了一层 ViewModel, 会需要写一些胶水代码，所以代码量会增加
 
-#### 网络层使用 YTKNetwork 配合 ReactiveCocoa 封装网络请求，解决如何交付数据，交付什么样的数据（去Model化)等问题
+#### 3.网络层使用 YTKNetwork 配合 ReactiveCocoa 封装网络请求，解决如何交付数据，交付什么样的数据（去Model化)等问题
 YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络库，其实现了一套 High Level 的 API，提供了更高层次的网络访问抽象。
 
 笔者对 YTKNetwork 进行了一些封装，结合 ReactiveCocoa，并提供 reFormatter 接口对服务器响应数据重新处理，灵活交付给业务层。
@@ -418,7 +418,7 @@ NSString *token = DecodeStringFromDic(jsonResponse, FKLoginAccessTokenKey)
 2. 交付什么样的数据
 答：纯字典，去Model
 
-#### 采用 JLRoutes 路由 对应用进行组件化解耦
+#### 4.采用 JLRoutes 路由 对应用进行组件化解耦
 iOS应用架构谈 组件化方案 一文中 Casa 针对 蘑菇街组件化 提出了质疑，质疑点主要在这几方面
 1. App启动时组件需要注册URL
 2. URL调用组件方式不太好传递类似 UIImage 等非常规对象
