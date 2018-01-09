@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TestLoginPwdInputTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HG-49-vjD">
+                        <rect key="frame" x="266" y="9" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="0HG-49-vjD" secondAttribute="height" multiplier="1:1" id="hR3-s5-jbW"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="icon_login_hide_pwd"/>
+                        <state key="selected" image="icon_login_show_pwd"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-Gf-FJc">
+                        <rect key="frame" x="20" y="6" width="35" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="qSU-Vz-5OF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pXj-Dv-R5C">
+                        <rect key="frame" x="95" y="12" width="161" height="19"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0HG-49-vjD" firstAttribute="width" secondItem="0HG-49-vjD" secondAttribute="height" multiplier="1:1" id="BzE-1Z-E95"/>
+                    <constraint firstItem="0HG-49-vjD" firstAttribute="leading" secondItem="pXj-Dv-R5C" secondAttribute="trailing" constant="10" id="F0n-OU-Ovy"/>
+                    <constraint firstItem="xD6-Gf-FJc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JK9-fN-kIq"/>
+                    <constraint firstItem="pXj-Dv-R5C" firstAttribute="leading" secondItem="xD6-Gf-FJc" secondAttribute="trailing" constant="40" id="cdW-Ry-Zm6"/>
+                    <constraint firstItem="0HG-49-vjD" firstAttribute="height" secondItem="xD6-Gf-FJc" secondAttribute="height" multiplier="0.8" id="htc-b7-KD3"/>
+                    <constraint firstItem="0HG-49-vjD" firstAttribute="centerY" secondItem="xD6-Gf-FJc" secondAttribute="centerY" id="kNM-D5-Dig"/>
+                    <constraint firstItem="xD6-Gf-FJc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kci-rF-vg7"/>
+                    <constraint firstItem="pXj-Dv-R5C" firstAttribute="centerY" secondItem="xD6-Gf-FJc" secondAttribute="centerY" id="voQ-gF-vPm"/>
+                    <constraint firstAttribute="trailing" secondItem="0HG-49-vjD" secondAttribute="trailing" constant="30" id="yOV-aG-2oU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="accessoryButton" destination="0HG-49-vjD" id="7iv-iF-qxi"/>
+                <outlet property="inputTextFiled" destination="pXj-Dv-R5C" id="5hM-fg-sHR"/>
+                <outlet property="textLabel" destination="xD6-Gf-FJc" id="9Av-bh-1MM"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_login_hide_pwd" width="26" height="10"/>
+        <image name="icon_login_show_pwd" width="26" height="16"/>
+    </resources>
+</document>

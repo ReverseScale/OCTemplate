@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestLoginViewController">
+            <connections>
+                <outlet property="loginInputTableView" destination="pLM-OL-WBX" id="DJJ-46-DIS"/>
+                <outlet property="tableHeaderView" destination="rZU-DH-PpH" id="0Fa-Ep-MBg"/>
+                <outlet property="userHeadImageView" destination="Cil-Q8-eos" id="87i-Dy-LJ3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-OL-WBX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="pLM-OL-WBX" secondAttribute="trailing" id="34p-ZH-AP6"/>
+                <constraint firstItem="pLM-OL-WBX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jux-Xy-Qg7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="pLM-OL-WBX" secondAttribute="bottom" id="hHf-Gh-M1C"/>
+                <constraint firstItem="pLM-OL-WBX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ncb-MA-C9y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <view contentMode="scaleToFill" id="rZU-DH-PpH">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_LogoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Cil-Q8-eos">
+                    <rect key="frame" x="106" y="70" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="GDP-F7-DQX"/>
+                        <constraint firstAttribute="height" constant="88" id="cPR-DX-KXm"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Cil-Q8-eos" firstAttribute="centerX" secondItem="rZU-DH-PpH" secondAttribute="centerX" id="6Wn-7k-DDe"/>
+                <constraint firstItem="Cil-Q8-eos" firstAttribute="centerY" secondItem="rZU-DH-PpH" secondAttribute="centerY" multiplier="1.25" id="y9a-rC-4Z3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xcf-e1-tdD"/>
+            <point key="canvasLocation" x="404" y="-366"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_LogoLogo" width="159" height="159"/>
+    </resources>
+</document>

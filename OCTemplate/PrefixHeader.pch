@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  OCTemplate
+//
+//  Created by WhatsXie on 2017/12/26.
+//  Copyright © 2017年 R.S. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifndef __IPHONE_8_0
+#warning "This project uses features only available in iOS SDK 8.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+    // 全局定义
+    #import "GlobalDefine.h"
+    #import "FunctionDefine.h"
+
+    // 响应式框架
+    #import "ReactiveObjC/ReactiveObjC.h"
+
+    // 提示组件
+    #import "SVProgressHUD+Helper.h"
+
+    // AOP Protocol
+    #import "AOPViewControllerProtocol.h"
+    #import "AOPViewModelProtocol.h"
+    #import "AOPViewProtocol.h"
+
+    // Request RAC
+    #import "FKBaseRequest+Rac.h"
+
+    // 自动布局框架
+    #import "Masonry.h"
+
+    // 路由常量
+    #import "RouterConstant.h"
+    #import "JLRoutes+GenerateURL.h"
+
+    // Category
+    #import "UIView+Extension.h"
+    #import "NSObject+Extension.h"
+    #import "UIViewController+Extension.h"
+    #import "UIColor+FKColor.h"
+    #import "UIImage+FKColor.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */

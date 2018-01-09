@@ -1,0 +1,1036 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3481FF4BBA600917F30 /* RouterConstant.m */; };
+		3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */; };
+		3450E3541FF4D9F400917F30 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* TestViewController.m */; };
+		3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3450E3531FF4D9F400917F30 /* TestViewController.xib */; };
+		3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656B1FF221FB0061A221 /* AppDelegate.m */; };
+		3477656F1FF221FB0061A221 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656E1FF221FB0061A221 /* ViewController.m */; };
+		347765721FF221FB0061A221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765701FF221FB0061A221 /* Main.storyboard */; };
+		347765741FF221FB0061A221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347765731FF221FB0061A221 /* Assets.xcassets */; };
+		347765771FF221FB0061A221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765751FF221FB0061A221 /* LaunchScreen.storyboard */; };
+		3477657A1FF221FB0061A221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765791FF221FB0061A221 /* main.m */; };
+		347765841FF221FB0061A221 /* OCTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765831FF221FB0061A221 /* OCTemplateTests.m */; };
+		3477658F1FF221FB0061A221 /* OCTemplateUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477658E1FF221FB0061A221 /* OCTemplateUITests.m */; };
+		347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477659E1FF222A50061A221 /* AOPViewControllerIntercepter.m */; };
+		347765B21FF32D1B0061A221 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765B11FF32D1B0061A221 /* UIViewController+Extension.m */; };
+		347765BB1FF33F6F0061A221 /* SVProgressHUD+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765B61FF33F6F0061A221 /* SVProgressHUD+Helper.m */; };
+		347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765B81FF33F6F0061A221 /* UIColor+FKColor.m */; };
+		347765BD1FF33F6F0061A221 /* UIImage+FKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765BA1FF33F6F0061A221 /* UIImage+FKColor.m */; };
+		347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765C21FF3427E0061A221 /* AOPViewModelIntercepter.m */; };
+		347765C61FF342AB0061A221 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765C51FF342AB0061A221 /* NSObject+Extension.m */; };
+		347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765CA1FF344D10061A221 /* UIView+Extension.m */; };
+		347765CE1FF3453D0061A221 /* AOPViewIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765CD1FF3453D0061A221 /* AOPViewIntercepter.m */; };
+		347765D91FF34BC40061A221 /* TestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765D71FF34BC40061A221 /* TestLoginViewController.m */; };
+		347765DA1FF34BC40061A221 /* TestLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765D81FF34BC40061A221 /* TestLoginViewController.xib */; };
+		347765E01FF34D2C0061A221 /* TestLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */; };
+		347765E41FF34DD00061A221 /* TestLoginInputFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765E31FF34DD00061A221 /* TestLoginInputFooterView.m */; };
+		347765E71FF34ED20061A221 /* TestLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765E61FF34ED20061A221 /* TestLoginButton.m */; };
+		347765EB1FF361890061A221 /* TestLoginAccountInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765E91FF361890061A221 /* TestLoginAccountInputTableViewCell.m */; };
+		347765EC1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765EA1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib */; };
+		347765F01FF363560061A221 /* TestLoginPwdInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765EE1FF363560061A221 /* TestLoginPwdInputTableViewCell.m */; };
+		347765F11FF363560061A221 /* TestLoginPwdInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765EF1FF363560061A221 /* TestLoginPwdInputTableViewCell.xib */; };
+		347766011FF36BC80061A221 /* FKBaseRequest+Rac.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */; };
+		347766021FF36BC80061A221 /* FKBaseRequestIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */; };
+		347766051FF36C120061A221 /* FKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766031FF36C120061A221 /* FKBaseRequest.m */; };
+		347766081FF36D100061A221 /* FunctionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766061FF36D100061A221 /* FunctionDefine.m */; };
+		3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477660A1FF36E400061A221 /* TestLoginRequest.m */; };
+		5613310DB0A2B436048E79BF /* libPods-OCTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 661C26118B0E309E797101CB /* libPods-OCTemplate.a */; };
+		7CB328F8239381AA657EF92D /* libPods-OCTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1008AEDB8AF55DF02EF0EDA /* libPods-OCTemplateTests.a */; };
+		AAF2AFCF57D775B0D9AAD11D /* libPods-OCTemplateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D9C45B4EF9DA7FD1724788 /* libPods-OCTemplateUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		347765801FF221FB0061A221 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3477655F1FF221FB0061A221 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 347765661FF221FB0061A221;
+			remoteInfo = OCTemplate;
+		};
+		3477658B1FF221FB0061A221 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3477655F1FF221FB0061A221 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 347765661FF221FB0061A221;
+			remoteInfo = OCTemplate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3450E3471FF4BBA600917F30 /* RouterConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterConstant.h; sourceTree = "<group>"; };
+		3450E3481FF4BBA600917F30 /* RouterConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterConstant.m; sourceTree = "<group>"; };
+		3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+GenerateURL.m"; sourceTree = "<group>"; };
+		3450E34E1FF4BD8D00917F30 /* JLRoutes+GenerateURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLRoutes+GenerateURL.h"; sourceTree = "<group>"; };
+		3450E3511FF4D9F400917F30 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3450E3521FF4D9F400917F30 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3450E3531FF4D9F400917F30 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		347765671FF221FB0061A221 /* OCTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3477656A1FF221FB0061A221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3477656B1FF221FB0061A221 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3477656D1FF221FB0061A221 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3477656E1FF221FB0061A221 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		347765711FF221FB0061A221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		347765731FF221FB0061A221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		347765761FF221FB0061A221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		347765781FF221FB0061A221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347765791FF221FB0061A221 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3477657F1FF221FB0061A221 /* OCTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		347765831FF221FB0061A221 /* OCTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTemplateTests.m; sourceTree = "<group>"; };
+		347765851FF221FB0061A221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3477658A1FF221FB0061A221 /* OCTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3477658E1FF221FB0061A221 /* OCTemplateUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTemplateUITests.m; sourceTree = "<group>"; };
+		347765901FF221FB0061A221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3477659D1FF222A50061A221 /* AOPViewControllerIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPViewControllerIntercepter.h; sourceTree = "<group>"; };
+		3477659E1FF222A50061A221 /* AOPViewControllerIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPViewControllerIntercepter.m; sourceTree = "<group>"; };
+		3477659F1FF222A50061A221 /* AOPViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPViewControllerProtocol.h; sourceTree = "<group>"; };
+		347765A31FF222A50061A221 /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
+		347765A71FF223D90061A221 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		347765B01FF32D1B0061A221 /* UIViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		347765B11FF32D1B0061A221 /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		347765B51FF33F6F0061A221 /* SVProgressHUD+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+Helper.h"; sourceTree = "<group>"; };
+		347765B61FF33F6F0061A221 /* SVProgressHUD+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+Helper.m"; sourceTree = "<group>"; };
+		347765B71FF33F6F0061A221 /* UIColor+FKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FKColor.h"; sourceTree = "<group>"; };
+		347765B81FF33F6F0061A221 /* UIColor+FKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FKColor.m"; sourceTree = "<group>"; };
+		347765B91FF33F6F0061A221 /* UIImage+FKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FKColor.h"; sourceTree = "<group>"; };
+		347765BA1FF33F6F0061A221 /* UIImage+FKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FKColor.m"; sourceTree = "<group>"; };
+		347765C01FF3423B0061A221 /* AOPViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPViewModelProtocol.h; sourceTree = "<group>"; };
+		347765C11FF3427E0061A221 /* AOPViewModelIntercepter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPViewModelIntercepter.h; sourceTree = "<group>"; };
+		347765C21FF3427E0061A221 /* AOPViewModelIntercepter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPViewModelIntercepter.m; sourceTree = "<group>"; };
+		347765C41FF342AB0061A221 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		347765C51FF342AB0061A221 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		347765C81FF344770061A221 /* AOPViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPViewProtocol.h; sourceTree = "<group>"; };
+		347765C91FF344D10061A221 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		347765CA1FF344D10061A221 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		347765CC1FF3453D0061A221 /* AOPViewIntercepter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPViewIntercepter.h; sourceTree = "<group>"; };
+		347765CD1FF3453D0061A221 /* AOPViewIntercepter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPViewIntercepter.m; sourceTree = "<group>"; };
+		347765CF1FF345FC0061A221 /* AOPTableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPTableViewProtocol.h; sourceTree = "<group>"; };
+		347765D01FF346300061A221 /* AOPTableViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPTableViewCellProtocol.h; sourceTree = "<group>"; };
+		347765D61FF34BC40061A221 /* TestLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewController.h; sourceTree = "<group>"; };
+		347765D71FF34BC40061A221 /* TestLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewController.m; sourceTree = "<group>"; };
+		347765D81FF34BC40061A221 /* TestLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLoginViewController.xib; sourceTree = "<group>"; };
+		347765DE1FF34D2C0061A221 /* TestLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewModel.h; sourceTree = "<group>"; };
+		347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewModel.m; sourceTree = "<group>"; };
+		347765E21FF34DD00061A221 /* TestLoginInputFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginInputFooterView.h; sourceTree = "<group>"; };
+		347765E31FF34DD00061A221 /* TestLoginInputFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginInputFooterView.m; sourceTree = "<group>"; };
+		347765E51FF34ED20061A221 /* TestLoginButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginButton.h; sourceTree = "<group>"; };
+		347765E61FF34ED20061A221 /* TestLoginButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginButton.m; sourceTree = "<group>"; };
+		347765E81FF361890061A221 /* TestLoginAccountInputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginAccountInputTableViewCell.h; sourceTree = "<group>"; };
+		347765E91FF361890061A221 /* TestLoginAccountInputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginAccountInputTableViewCell.m; sourceTree = "<group>"; };
+		347765EA1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLoginAccountInputTableViewCell.xib; sourceTree = "<group>"; };
+		347765ED1FF363560061A221 /* TestLoginPwdInputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginPwdInputTableViewCell.h; sourceTree = "<group>"; };
+		347765EE1FF363560061A221 /* TestLoginPwdInputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginPwdInputTableViewCell.m; sourceTree = "<group>"; };
+		347765EF1FF363560061A221 /* TestLoginPwdInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLoginPwdInputTableViewCell.xib; sourceTree = "<group>"; };
+		347765FB1FF36BC70061A221 /* FKBaseRequestIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBaseRequestIntercepter.h; sourceTree = "<group>"; };
+		347765FD1FF36BC80061A221 /* FKBaseRequest+Rac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FKBaseRequest+Rac.h"; sourceTree = "<group>"; };
+		347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FKBaseRequest+Rac.m"; sourceTree = "<group>"; };
+		347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBaseRequestIntercepter.m; sourceTree = "<group>"; };
+		347766031FF36C120061A221 /* FKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBaseRequest.m; sourceTree = "<group>"; };
+		347766041FF36C120061A221 /* FKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBaseRequest.h; sourceTree = "<group>"; };
+		347766061FF36D100061A221 /* FunctionDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionDefine.m; sourceTree = "<group>"; };
+		347766071FF36D100061A221 /* FunctionDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDefine.h; sourceTree = "<group>"; };
+		347766091FF36E400061A221 /* TestLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginRequest.h; sourceTree = "<group>"; };
+		3477660A1FF36E400061A221 /* TestLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginRequest.m; sourceTree = "<group>"; };
+		55D9C45B4EF9DA7FD1724788 /* libPods-OCTemplateUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTemplateUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65113D233E1AB71C524A586B /* Pods-OCTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		661C26118B0E309E797101CB /* libPods-OCTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1F47998A4616B895253F1F /* Pods-OCTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		C1008AEDB8AF55DF02EF0EDA /* libPods-OCTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01B05CB752A50B9BADBE180 /* Pods-OCTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateUITests/Pods-OCTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC54579FF342EF90D41EE826 /* Pods-OCTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		EE0808F21B8F090FC67CE98C /* Pods-OCTemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateUITests/Pods-OCTemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		347765641FF221FB0061A221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5613310DB0A2B436048E79BF /* libPods-OCTemplate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3477657C1FF221FB0061A221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB328F8239381AA657EF92D /* libPods-OCTemplateTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347765871FF221FB0061A221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF2AFCF57D775B0D9AAD11D /* libPods-OCTemplateUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DA8997A70E761D4AF4458D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65113D233E1AB71C524A586B /* Pods-OCTemplate.debug.xcconfig */,
+				EC54579FF342EF90D41EE826 /* Pods-OCTemplate.release.xcconfig */,
+				1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */,
+				6C1F47998A4616B895253F1F /* Pods-OCTemplateTests.release.xcconfig */,
+				D01B05CB752A50B9BADBE180 /* Pods-OCTemplateUITests.debug.xcconfig */,
+				EE0808F21B8F090FC67CE98C /* Pods-OCTemplateUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3450E3461FF4BB4E00917F30 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3450E3471FF4BBA600917F30 /* RouterConstant.h */,
+				3450E3481FF4BBA600917F30 /* RouterConstant.m */,
+				3450E34E1FF4BD8D00917F30 /* JLRoutes+GenerateURL.h */,
+				3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3477655E1FF221FB0061A221 = {
+			isa = PBXGroup;
+			children = (
+				347765691FF221FB0061A221 /* OCTemplate */,
+				347765821FF221FB0061A221 /* OCTemplateTests */,
+				3477658D1FF221FB0061A221 /* OCTemplateUITests */,
+				347765681FF221FB0061A221 /* Products */,
+				1DA8997A70E761D4AF4458D4 /* Pods */,
+				CDE2185055A0BC5A317E7A04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		347765681FF221FB0061A221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				347765671FF221FB0061A221 /* OCTemplate.app */,
+				3477657F1FF221FB0061A221 /* OCTemplateTests.xctest */,
+				3477658A1FF221FB0061A221 /* OCTemplateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		347765691FF221FB0061A221 /* OCTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				347765A71FF223D90061A221 /* PrefixHeader.pch */,
+				3477656A1FF221FB0061A221 /* AppDelegate.h */,
+				3477656B1FF221FB0061A221 /* AppDelegate.m */,
+				3450E3461FF4BB4E00917F30 /* Router */,
+				347765F31FF369040061A221 /* Api */,
+				347765F21FF368F70061A221 /* Network */,
+				347765DB1FF34C560061A221 /* TestMVVM */,
+				347765B41FF33F6F0061A221 /* Utils */,
+				347765A21FF222A50061A221 /* Macros */,
+				3477659C1FF222A50061A221 /* AOPBase */,
+				347765701FF221FB0061A221 /* Main.storyboard */,
+				347765731FF221FB0061A221 /* Assets.xcassets */,
+				347765751FF221FB0061A221 /* LaunchScreen.storyboard */,
+				347765781FF221FB0061A221 /* Info.plist */,
+				347765791FF221FB0061A221 /* main.m */,
+			);
+			path = OCTemplate;
+			sourceTree = "<group>";
+		};
+		347765821FF221FB0061A221 /* OCTemplateTests */ = {
+			isa = PBXGroup;
+			children = (
+				347765831FF221FB0061A221 /* OCTemplateTests.m */,
+				347765851FF221FB0061A221 /* Info.plist */,
+			);
+			path = OCTemplateTests;
+			sourceTree = "<group>";
+		};
+		3477658D1FF221FB0061A221 /* OCTemplateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3477658E1FF221FB0061A221 /* OCTemplateUITests.m */,
+				347765901FF221FB0061A221 /* Info.plist */,
+			);
+			path = OCTemplateUITests;
+			sourceTree = "<group>";
+		};
+		3477659C1FF222A50061A221 /* AOPBase */ = {
+			isa = PBXGroup;
+			children = (
+				347765C71FF344610061A221 /* View */,
+				347765BF1FF3420A0061A221 /* Model */,
+				347765BE1FF341F10061A221 /* ViewController */,
+			);
+			path = AOPBase;
+			sourceTree = "<group>";
+		};
+		347765A21FF222A50061A221 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				347766071FF36D100061A221 /* FunctionDefine.h */,
+				347766061FF36D100061A221 /* FunctionDefine.m */,
+				347765A31FF222A50061A221 /* GlobalDefine.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		347765B41FF33F6F0061A221 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				347765B51FF33F6F0061A221 /* SVProgressHUD+Helper.h */,
+				347765B61FF33F6F0061A221 /* SVProgressHUD+Helper.m */,
+				347765B71FF33F6F0061A221 /* UIColor+FKColor.h */,
+				347765B81FF33F6F0061A221 /* UIColor+FKColor.m */,
+				347765B91FF33F6F0061A221 /* UIImage+FKColor.h */,
+				347765BA1FF33F6F0061A221 /* UIImage+FKColor.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		347765BE1FF341F10061A221 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3477659F1FF222A50061A221 /* AOPViewControllerProtocol.h */,
+				3477659D1FF222A50061A221 /* AOPViewControllerIntercepter.h */,
+				3477659E1FF222A50061A221 /* AOPViewControllerIntercepter.m */,
+				347765B01FF32D1B0061A221 /* UIViewController+Extension.h */,
+				347765B11FF32D1B0061A221 /* UIViewController+Extension.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		347765BF1FF3420A0061A221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				347765C01FF3423B0061A221 /* AOPViewModelProtocol.h */,
+				347765C11FF3427E0061A221 /* AOPViewModelIntercepter.h */,
+				347765C21FF3427E0061A221 /* AOPViewModelIntercepter.m */,
+				347765C41FF342AB0061A221 /* NSObject+Extension.h */,
+				347765C51FF342AB0061A221 /* NSObject+Extension.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		347765C71FF344610061A221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				347765C81FF344770061A221 /* AOPViewProtocol.h */,
+				347765CF1FF345FC0061A221 /* AOPTableViewProtocol.h */,
+				347765D01FF346300061A221 /* AOPTableViewCellProtocol.h */,
+				347765CC1FF3453D0061A221 /* AOPViewIntercepter.h */,
+				347765CD1FF3453D0061A221 /* AOPViewIntercepter.m */,
+				347765C91FF344D10061A221 /* UIView+Extension.h */,
+				347765CA1FF344D10061A221 /* UIView+Extension.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		347765DB1FF34C560061A221 /* TestMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				347765DC1FF34C860061A221 /* Controller */,
+				347765E11FF34DB30061A221 /* View */,
+				347765DD1FF34D110061A221 /* ViewModel */,
+			);
+			path = TestMVVM;
+			sourceTree = "<group>";
+		};
+		347765DC1FF34C860061A221 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				347765D61FF34BC40061A221 /* TestLoginViewController.h */,
+				347765D71FF34BC40061A221 /* TestLoginViewController.m */,
+				347765D81FF34BC40061A221 /* TestLoginViewController.xib */,
+				3477656D1FF221FB0061A221 /* ViewController.h */,
+				3477656E1FF221FB0061A221 /* ViewController.m */,
+				3450E3511FF4D9F400917F30 /* TestViewController.h */,
+				3450E3521FF4D9F400917F30 /* TestViewController.m */,
+				3450E3531FF4D9F400917F30 /* TestViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		347765DD1FF34D110061A221 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				347765DE1FF34D2C0061A221 /* TestLoginViewModel.h */,
+				347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		347765E11FF34DB30061A221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				347765E51FF34ED20061A221 /* TestLoginButton.h */,
+				347765E61FF34ED20061A221 /* TestLoginButton.m */,
+				347765E21FF34DD00061A221 /* TestLoginInputFooterView.h */,
+				347765E31FF34DD00061A221 /* TestLoginInputFooterView.m */,
+				347765E81FF361890061A221 /* TestLoginAccountInputTableViewCell.h */,
+				347765E91FF361890061A221 /* TestLoginAccountInputTableViewCell.m */,
+				347765EA1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib */,
+				347765ED1FF363560061A221 /* TestLoginPwdInputTableViewCell.h */,
+				347765EE1FF363560061A221 /* TestLoginPwdInputTableViewCell.m */,
+				347765EF1FF363560061A221 /* TestLoginPwdInputTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		347765F21FF368F70061A221 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				347766041FF36C120061A221 /* FKBaseRequest.h */,
+				347766031FF36C120061A221 /* FKBaseRequest.m */,
+				347765FD1FF36BC80061A221 /* FKBaseRequest+Rac.h */,
+				347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */,
+				347765FB1FF36BC70061A221 /* FKBaseRequestIntercepter.h */,
+				347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		347765F31FF369040061A221 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				347766091FF36E400061A221 /* TestLoginRequest.h */,
+				3477660A1FF36E400061A221 /* TestLoginRequest.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CDE2185055A0BC5A317E7A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661C26118B0E309E797101CB /* libPods-OCTemplate.a */,
+				C1008AEDB8AF55DF02EF0EDA /* libPods-OCTemplateTests.a */,
+				55D9C45B4EF9DA7FD1724788 /* libPods-OCTemplateUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		347765661FF221FB0061A221 /* OCTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347765931FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplate" */;
+			buildPhases = (
+				2634A2D31D9AC32204C53397 /* [CP] Check Pods Manifest.lock */,
+				347765631FF221FB0061A221 /* Sources */,
+				347765641FF221FB0061A221 /* Frameworks */,
+				347765651FF221FB0061A221 /* Resources */,
+				334E40804377F706DD529420 /* [CP] Embed Pods Frameworks */,
+				017089317B3D5E8AC361453D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCTemplate;
+			productName = OCTemplate;
+			productReference = 347765671FF221FB0061A221 /* OCTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3477657E1FF221FB0061A221 /* OCTemplateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347765961FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplateTests" */;
+			buildPhases = (
+				6DCAE9B454E0ACD7946F56A1 /* [CP] Check Pods Manifest.lock */,
+				3477657B1FF221FB0061A221 /* Sources */,
+				3477657C1FF221FB0061A221 /* Frameworks */,
+				3477657D1FF221FB0061A221 /* Resources */,
+				D1713B77FF8509A3011E4DC5 /* [CP] Embed Pods Frameworks */,
+				6D3C76E062CDC2EE37F2E4DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				347765811FF221FB0061A221 /* PBXTargetDependency */,
+			);
+			name = OCTemplateTests;
+			productName = OCTemplateTests;
+			productReference = 3477657F1FF221FB0061A221 /* OCTemplateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		347765891FF221FB0061A221 /* OCTemplateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347765991FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplateUITests" */;
+			buildPhases = (
+				2F03CCD3A1D4639B38D6FA2F /* [CP] Check Pods Manifest.lock */,
+				347765861FF221FB0061A221 /* Sources */,
+				347765871FF221FB0061A221 /* Frameworks */,
+				347765881FF221FB0061A221 /* Resources */,
+				023CD9E6A8CA037F46673D81 /* [CP] Embed Pods Frameworks */,
+				B58CA6B212315B34395BB645 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3477658C1FF221FB0061A221 /* PBXTargetDependency */,
+			);
+			name = OCTemplateUITests;
+			productName = OCTemplateUITests;
+			productReference = 3477658A1FF221FB0061A221 /* OCTemplateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3477655F1FF221FB0061A221 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = R.S;
+				TargetAttributes = {
+					347765661FF221FB0061A221 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3477657E1FF221FB0061A221 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 347765661FF221FB0061A221;
+					};
+					347765891FF221FB0061A221 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 347765661FF221FB0061A221;
+					};
+				};
+			};
+			buildConfigurationList = 347765621FF221FB0061A221 /* Build configuration list for PBXProject "OCTemplate" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3477655E1FF221FB0061A221;
+			productRefGroup = 347765681FF221FB0061A221 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				347765661FF221FB0061A221 /* OCTemplate */,
+				3477657E1FF221FB0061A221 /* OCTemplateTests */,
+				347765891FF221FB0061A221 /* OCTemplateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		347765651FF221FB0061A221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347765EC1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib in Resources */,
+				347765771FF221FB0061A221 /* LaunchScreen.storyboard in Resources */,
+				347765F11FF363560061A221 /* TestLoginPwdInputTableViewCell.xib in Resources */,
+				347765DA1FF34BC40061A221 /* TestLoginViewController.xib in Resources */,
+				347765741FF221FB0061A221 /* Assets.xcassets in Resources */,
+				3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */,
+				347765721FF221FB0061A221 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3477657D1FF221FB0061A221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347765881FF221FB0061A221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		017089317B3D5E8AC361453D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		023CD9E6A8CA037F46673D81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplateUITests/Pods-OCTemplateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2634A2D31D9AC32204C53397 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCTemplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F03CCD3A1D4639B38D6FA2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCTemplateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		334E40804377F706DD529420 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3C76E062CDC2EE37F2E4DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DCAE9B454E0ACD7946F56A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCTemplateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58CA6B212315B34395BB645 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplateUITests/Pods-OCTemplateUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1713B77FF8509A3011E4DC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		347765631FF221FB0061A221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347765BD1FF33F6F0061A221 /* UIImage+FKColor.m in Sources */,
+				3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */,
+				347765E71FF34ED20061A221 /* TestLoginButton.m in Sources */,
+				3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */,
+				3477656F1FF221FB0061A221 /* ViewController.m in Sources */,
+				347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */,
+				347765EB1FF361890061A221 /* TestLoginAccountInputTableViewCell.m in Sources */,
+				347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */,
+				347765F01FF363560061A221 /* TestLoginPwdInputTableViewCell.m in Sources */,
+				347766081FF36D100061A221 /* FunctionDefine.m in Sources */,
+				347766051FF36C120061A221 /* FKBaseRequest.m in Sources */,
+				347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */,
+				347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */,
+				3477657A1FF221FB0061A221 /* main.m in Sources */,
+				3450E3541FF4D9F400917F30 /* TestViewController.m in Sources */,
+				347765E41FF34DD00061A221 /* TestLoginInputFooterView.m in Sources */,
+				3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */,
+				347765B21FF32D1B0061A221 /* UIViewController+Extension.m in Sources */,
+				347765C61FF342AB0061A221 /* NSObject+Extension.m in Sources */,
+				3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */,
+				347765E01FF34D2C0061A221 /* TestLoginViewModel.m in Sources */,
+				347765BB1FF33F6F0061A221 /* SVProgressHUD+Helper.m in Sources */,
+				347766021FF36BC80061A221 /* FKBaseRequestIntercepter.m in Sources */,
+				347766011FF36BC80061A221 /* FKBaseRequest+Rac.m in Sources */,
+				347765D91FF34BC40061A221 /* TestLoginViewController.m in Sources */,
+				347765CE1FF3453D0061A221 /* AOPViewIntercepter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3477657B1FF221FB0061A221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347765841FF221FB0061A221 /* OCTemplateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347765861FF221FB0061A221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3477658F1FF221FB0061A221 /* OCTemplateUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		347765811FF221FB0061A221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 347765661FF221FB0061A221 /* OCTemplate */;
+			targetProxy = 347765801FF221FB0061A221 /* PBXContainerItemProxy */;
+		};
+		3477658C1FF221FB0061A221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 347765661FF221FB0061A221 /* OCTemplate */;
+			targetProxy = 3477658B1FF221FB0061A221 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		347765701FF221FB0061A221 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347765711FF221FB0061A221 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		347765751FF221FB0061A221 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347765761FF221FB0061A221 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		347765911FF221FB0061A221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		347765921FF221FB0061A221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		347765941FF221FB0061A221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65113D233E1AB71C524A586B /* Pods-OCTemplate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OCTemplate/PrefixHeader.pch";
+				INFOPLIST_FILE = OCTemplate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		347765951FF221FB0061A221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC54579FF342EF90D41EE826 /* Pods-OCTemplate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OCTemplate/PrefixHeader.pch";
+				INFOPLIST_FILE = OCTemplate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		347765971FF221FB0061A221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				INFOPLIST_FILE = OCTemplateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCTemplate.app/OCTemplate";
+			};
+			name = Debug;
+		};
+		347765981FF221FB0061A221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C1F47998A4616B895253F1F /* Pods-OCTemplateTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				INFOPLIST_FILE = OCTemplateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCTemplate.app/OCTemplate";
+			};
+			name = Release;
+		};
+		3477659A1FF221FB0061A221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D01B05CB752A50B9BADBE180 /* Pods-OCTemplateUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				INFOPLIST_FILE = OCTemplateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OCTemplate;
+			};
+			name = Debug;
+		};
+		3477659B1FF221FB0061A221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0808F21B8F090FC67CE98C /* Pods-OCTemplateUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				INFOPLIST_FILE = OCTemplateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OCTemplate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		347765621FF221FB0061A221 /* Build configuration list for PBXProject "OCTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347765911FF221FB0061A221 /* Debug */,
+				347765921FF221FB0061A221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347765931FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347765941FF221FB0061A221 /* Debug */,
+				347765951FF221FB0061A221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347765961FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347765971FF221FB0061A221 /* Debug */,
+				347765981FF221FB0061A221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347765991FF221FB0061A221 /* Build configuration list for PBXNativeTarget "OCTemplateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3477659A1FF221FB0061A221 /* Debug */,
+				3477659B1FF221FB0061A221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3477655F1FF221FB0061A221 /* Project object */;
+}
