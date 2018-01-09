@@ -92,7 +92,9 @@ Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代�
     return self;
 }
 ```
-至于Category已经非常熟悉了
+
+至于 Category 已经非常熟悉了
+
 ```Objective-C
 @interface UIViewController (NonBase)
 
@@ -128,15 +130,18 @@ Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代�
 #### View层采用 MVVM 设计模式，使用 ReactiveObjC 进行数据绑定
 
 *MVC*
+
 作为老牌思想MVC，大家早已耳熟能详，MVC素有 Massive VC之称，随着业务增加，Controller将会越来越复杂，最终Controller会变成一个"神类", 即有网络请求等代码，又充斥着大量业务逻辑，所以为Controller减负，在某些情况下变得势在必行
 
 *MVVM*
+
 MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部分：Model和ViewModel (注：胖Model 是指包含了一些弱业务逻辑的Model)
 胖Model实际上是为了减负 Controller 而存在的，而 MVVM 是为了拆分胖Model , 最终目的都是为了减负Controller。
 
 我们知道，苹果MVC并没有专门为网络层代码分专门的层级，按照以往习惯，大家都写在了Controller 中，这也是Controller 变Massive得元凶之一，现在我们可以将网络请求等诸如此类的代码放到ViewModel中了 （文章后半部分将会描述ViewModel中的网络请求）
 
 *数据流向*
+
 正常的网络请求获取数据，然后更新View自然不必多说，那么如果View产生了数据要怎么把数据给到Model，由于View不直接持有ViewModel，所以我们需要有个桥梁 ReactiveCocoa, 通过 Signal 来和 ViewModel 通信，这个过程我们使用 通知 或者 Target-Action也可以实现相同的效果，只不过没有 ReactiveCocoa 如此方便罢了
 
 ```Objective-C
@@ -149,7 +154,6 @@ MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部
         // 绑定账号 View -> ViewModel 传递数据 
         @weakify(self);
         RAC(_viewModel, userAccount) = [[self.inputTextFiled.rac_textSignal takeUntil:self.rac_prepareForReuseSignal] map:^id _Nullable(NSString * _Nullable account) {
-            
             @strongify(self);
             // 限制账号长度
             if (account.length > 25) {
@@ -161,7 +165,7 @@ MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部
 }
 ```
 
-上面代码给出了View -> ViewModel 绑定的一个例子 具体一些详情，可以直接看Demo
+上面代码给出了 View -> ViewModel 绑定的一个例子 具体一些详情，可以直接看Demo
 MVVM一些总结：
 1. View <-> C <-> ViewModel <-> Model 实际上应该称之为MVCVM
 2. Controller 将不再直接和 Model 进行绑定，而通过桥梁ViewModel
@@ -177,7 +181,9 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 1. 以什么方式将数据交付给业务层？
 2. 交付什么样的数据 ?
 对于第一个问题
+
 *以什么方式将数据交付给业务层？*
+
 虽然 iOS应用架构谈 网络层设计方案 中 Casa大神写到 尽量不要用block，应该使用代理
 的确，Block难以追踪和定位错误，容易内存泄漏， YTKNetwork 也提供代理方式回调
 
@@ -231,7 +237,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 ```
 
 写了一个简单的 Category FKBaseRequest+Rac.h
-ViewModel中使用 RACCommand 封装调用：
+ViewModel 中使用 RACCommand 封装调用：
 ```Objective-C
 - (RACCommand *)loginCommand {
     if (!_loginCommand) {
@@ -270,6 +276,7 @@ return [loginRequest rac_requestSignal];
 ```
 
 *交付什么样的数据 ?*
+
 现在诸如 JSONModel ，YYModel 之类的Json转Model的库也非常多，大多数Json对象，网络请求成功直接就被转成Model了
 然而 iOS应用架构谈 网络层设计方案 中给出了两种有意思的交付思路
 1. 使用 reformer 对数据进行清洗
@@ -278,6 +285,7 @@ return [loginRequest rac_requestSignal];
 Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑和交付不同的业务数据，可以说是非常灵活了
 
 *使用 reformer 对数据进行清洗*
+
 在网络层封装 FKBaseRequest.h 中 给出了 FKBaseRequestFeformDelegate 接口来重塑数据
 ```Objective-C
 @protocol FKBaseRequestFeformDelegate <NSObject>
@@ -311,6 +319,7 @@ Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑
 ```
 
 *去特定对象表征 （去Model）*
+
 这思路可以说是业界的泥石流了
 去Model也就是说，使用NSDictionary形式交付数据，对于网络层而言，只需要保持住原始数据即可，不需要主动转化成数据原型
 但是会存在一些小问题
@@ -407,6 +416,7 @@ iOS应用架构谈 组件化方案 一文中 Casa 针对 蘑菇街组件化 提�
 1. App启动时组件需要注册URL
 2. URL调用组件方式不太好传递类似 UIImage 等非常规对象
 3. URL需要添加额外参数可读性差，所以没必要使用URL
+
 对于 App启动时组件需要注册URL 顾虑主要在于，注册的URL需要在应用生存周期内常驻内存，如果是注册Class还好些，如果注册的是实例，消耗的内存就非常可观了
 
 ```Objective-C
