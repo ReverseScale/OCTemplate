@@ -7,14 +7,14 @@
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
-
+----
 ### 🤖 要求
 
 * iOS 8.0+
 * Xcode 8.0+
 * Objective-C
 
-
+----
 ### 🎨 测试 UI 什么样子？
 
 | 名称 |1.展示页 |2.展示页 |3.展示页 |
@@ -22,7 +22,7 @@
 | 截图 | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41430725.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/87254954.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/2391827.jpg) | 
 | 描述 | 登录视图 | 示例展示 | 跳转页面 | 
 
-
+----
 ### 🎯 安装方法
 
 #### 安装
@@ -49,7 +49,7 @@ use_frameworks!
   pod 'Masonry', '~> 1.0.2'
 ```
 
-
+----
 ### 🛠 框架介绍
 
 #### AOP 模式（Aspects-RunTime 代替基类）+ Category 方法交换
@@ -535,10 +535,12 @@ NSString *router = [JLRoutes fk_generateURLWithPattern:FKNavPushRoute parameters
 [[UIApplication sharedApplication] openURL:JLRGenRouteURL(FKDefaultRouteSchema, router)];
 ```
 
+----
 ### 📝 原文地址
 
 简书博客：http://www.jianshu.com/p/921dd65e79cb
 
+----
 ### ⚖ 协议
 
 ```
@@ -565,6 +567,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+----
 ### 😬 联系
 
 * 微信 : WhatsXie
