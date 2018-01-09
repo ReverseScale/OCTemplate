@@ -143,12 +143,11 @@ MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部
 
 我们知道，苹果MVC并没有专门为网络层代码分专门的层级，按照以往习惯，大家都写在了Controller 中，这也是Controller 变Massive得元凶之一，现在我们可以将网络请求等诸如此类的代码放到ViewModel中了 （文章后半部分将会描述ViewModel中的网络请求）
 
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/75363007.jpg)
+
 *-数据流向-*
 
 正常的网络请求获取数据，然后更新View自然不必多说，那么如果View产生了数据要怎么把数据给到Model，由于View不直接持有ViewModel，所以我们需要有个桥梁 ReactiveCocoa, 通过 Signal 来和 ViewModel 通信，这个过程我们使用 通知 或者 Target-Action也可以实现相同的效果，只不过没有 ReactiveCocoa 如此方便罢了
-
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/75363007.jpg)
-
 
 ```Objective-C
 /*  View -> ViewModel 传递数据示例   */
@@ -190,7 +189,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 
 *以什么方式将数据交付给业务层？*
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/83927019.jpg)
+![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/32067775.jpg)
 
 虽然 iOS应用架构谈 网络层设计方案 中 Casa大神写到 尽量不要用block，应该使用代理
 的确，Block难以追踪和定位错误，容易内存泄漏， YTKNetwork 也提供代理方式回调
