@@ -68,7 +68,7 @@ Casa大神回答是NO，原因如下
 对于OC来说，方法拦截很容易就想到自带的黑魔法方法调配 Method Swizzling， 至于为ViewController做动态配置，自然非Category莫属了
 Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代码采用 Aspects 做方法拦截。
 
-```Swift
+```Objective-C
 + (void)load {
     [super load];
     [FKViewControllerIntercepter sharedInstance];
@@ -93,7 +93,7 @@ Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代�
 }
 ```
 至于Category已经非常熟悉了
-```Swift
+```Objective-C
 @interface UIViewController (NonBase)
 
 /**
@@ -139,7 +139,7 @@ MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部
 *数据流向*
 正常的网络请求获取数据，然后更新View自然不必多说，那么如果View产生了数据要怎么把数据给到Model，由于View不直接持有ViewModel，所以我们需要有个桥梁 ReactiveCocoa, 通过 Signal 来和 ViewModel 通信，这个过程我们使用 通知 或者 Target-Action也可以实现相同的效果，只不过没有 ReactiveCocoa 如此方便罢了
 
-```Swift
+```Objective-C
 /*  View -> ViewModel 传递数据示例   */
 #pragma mark - Bind ViewModel
 - (void)bindViewModel:(id<FKViewModelProtocol>)viewModel withParams:(NSDictionary *)params {
@@ -181,7 +181,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 虽然 iOS应用架构谈 网络层设计方案 中 Casa大神写到 尽量不要用block，应该使用代理
 的确，Block难以追踪和定位错误，容易内存泄漏， YTKNetwork 也提供代理方式回调
 
-```Swift
+```Objective-C
 @protocol YTKRequestDelegate <NSObject>
 
 @optional
@@ -200,7 +200,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 前文有说过，MVVM 并不等于 ReactiveCocoa , 但是想要体验最纯正的 ReactiveCocoa 还是Block较为酸爽，Demo中笔者两者都给出了代码, 大家可以自行选择和斟酌哈
 我们看一下 YTKNetwork 和 ReactiveCocoa 结合的代码
 
-```
+```Objective-C
 - (RACSignal *)rac_requestSignal {
     [self stop];
     RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
@@ -232,7 +232,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 
 写了一个简单的 Category FKBaseRequest+Rac.h
 ViewModel中使用 RACCommand 封装调用：
-```
+```Objective-C
 - (RACCommand *)loginCommand {
     if (!_loginCommand) {
         @weakify(self);
@@ -246,7 +246,7 @@ ViewModel中使用 RACCommand 封装调用：
 }
 ```
 Block方式交付业务
-```
+```Objective-C
 FKLoginRequest *loginRequest = [[FKLoginRequest alloc] initWithUsr:self.userAccount pwd:self.password];
 return [[[loginRequest rac_requestSignal] doNext:^(id  _Nullable x) {
     
@@ -256,7 +256,7 @@ return [[[loginRequest rac_requestSignal] doNext:^(id  _Nullable x) {
 }] materialize];
 ```
 Delegate方式交付业务
-```
+```Objective-C
 FKLoginRequest *loginRequest = [[FKLoginRequest alloc] initWithUsr:self.userAccount pwd:self.password];
 // 数据请求响应代理 通过代理回调
 loginRequest.delegate = self;
@@ -279,7 +279,7 @@ Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑
 
 *使用 reformer 对数据进行清洗*
 在网络层封装 FKBaseRequest.h 中 给出了 FKBaseRequestFeformDelegate 接口来重塑数据
-```
+```Objective-C
 @protocol FKBaseRequestFeformDelegate <NSObject>
 
 /**
@@ -302,7 +302,7 @@ Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑
 }
 ```
 也可以直接在子类的 RequestManager 中覆盖父类方法达到一样的效果
-```
+```Objective-C
 /* FKLoginRequest.m */
 
 // 可以在这里对response 数据进行重新格式化， 也可以使用delegate 设置 reformattor
@@ -320,7 +320,7 @@ Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑
 Casa大神 提出了 使用EXTERN + Const 字符串形式，并建议字符串跟着reformer走，个人觉得很多时候API只需要一种解析格式，所以Demo跟着 APIManager 走，其他情况下常量字符串建议听从 Casa大神 的建议，
 常量定义：
 
-```
+```Objective-C
 /* FKBaseRequest.h */
 // 登录token key
 FOUNDATION_EXTERN NSString *FKLoginAccessTokenKey;
@@ -331,7 +331,7 @@ NSString *FKLoginAccessTokenKey = @"accessToken";
 
 在 .h 和 .m 文件中要同时写太多代码，我们也可以使用局部常量的形式，只要在 .h 文件中定义即可
 
-```
+```Objective-C
 // 也可以写成 局部常量形式
 static const NSString *FKLoginAccessTokenKey2 = @"accessToken";
 最终那么我们的reformer可能会变成这样子
@@ -350,7 +350,7 @@ static const NSString *FKLoginAccessTokenKey2 = @"accessToken";
 复杂和多样的数据结构如何解析？
 有时候，reformer 交付过来的数据，我们需要解析的可能是字符串类型，也可能是NSNumber类型，也有可能是数组
 为此，笔者提供了一系列 Encode Decode方法，来降低解析的复杂度和安全性
-```
+```Objective-C
 #pragma mark - Encode Decode 方法
 // NSDictionary -> NSString
 FK_EXTERN NSString* DecodeObjectFromDic(NSDictionary *dic, NSString *key);
@@ -379,7 +379,7 @@ FK_EXTERN void EncodeDefaultStrObjctToDic(NSMutableDictionary *dic,NSString *obj
 FK_EXTERN void EncodeUnEmptyObjctToDic(NSMutableDictionary *dic,NSObject *object, NSString *key);
 ```
 我们的reformer可以写成这样子
-```
+```Objective-C
 #pragma mark - FKBaseRequestFeformDelegate
 - (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse {
     if([request isKindOfClass:FKLoginRequest.class]){
@@ -393,7 +393,7 @@ FK_EXTERN void EncodeUnEmptyObjctToDic(NSMutableDictionary *dic,NSObject *object
 }
 ```
 解析有可能是这样子
-```
+```Objective-C
 NSString *token = DecodeStringFromDic(jsonResponse, FKLoginAccessTokenKey)
 ```
 好了，至此我们解决了两个问题
@@ -409,7 +409,7 @@ iOS应用架构谈 组件化方案 一文中 Casa 针对 蘑菇街组件化 提�
 3. URL需要添加额外参数可读性差，所以没必要使用URL
 对于 App启动时组件需要注册URL 顾虑主要在于，注册的URL需要在应用生存周期内常驻内存，如果是注册Class还好些，如果注册的是实例，消耗的内存就非常可观了
 
-```
+```Objective-C
 #pragma mark - 路由表
 NSString *const FKNavPushRoute = @"/com_madao_navPush/:viewController";
 NSString *const FKNavPresentRoute = @"/com_madao_navPresent/:viewController";
@@ -419,7 +419,7 @@ NSString *const FKComponentsCallBackRoute = @"/com_madao_callBack/*";
 而且JLRoutes 还支持 * 来进行通配，路由表如何编写大家可以自由发挥
 对应的路由事件 handler
 
-```
+```Objective-C
 // push
 // 路由 /com_madao_navPush/:viewController
 [[JLRoutes globalRoutes] addRoute:FKNavPushRoute handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
@@ -462,14 +462,14 @@ NSString *const FKComponentsCallBackRoute = @"/com_madao_callBack/*";
 通过URL中传入的组件名动态注册，处理相应跳转事件，并不需要每个组件一一注册
 使用URL路由，必然URL会散落到代码各个地方
 
-```
+```Objective-C
 NSString *key = @"key";
 NSString *value = @"value";
 NSString *url = [NSString stringWithFormat:@"/com_madao_navPush/%@?%@=%@", NSStringFromClass(ViewController.class), key, value];
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 ```
 诸如此类丑陋的代码，散落在各个地方的话简直会让人头皮发麻, 所以笔者在 JLRoutes+GenerateURL.h 写了一些 Helper方法
-```
+```Objective-C
 /**
  避免 URL 散落各处， 集中生成URL
  
@@ -507,7 +507,7 @@ http://madao?param1=value1¶m2=value2 解析成 @{param1:value1, param2:value2}
 + (NSString *)fk_mapDictionaryToURLQueryString:(NSDictionary *)dic;
 ```
 宏定义Helper
-```
+```Objective-C
 #undef JLRGenRoute
 #define JLRGenRoute(Schema, path) \
 ([NSString stringWithFormat: @"%@:/%@", \
@@ -520,7 +520,7 @@ path])
 JLRGenRoute(Schema, path)])
 ```
 最终我们的调用可以变成
-```
+```Objective-C
 NSString *router = [JLRoutes fk_generateURLWithPattern:FKNavPushRoute parameters:@[NSStringFromClass(ViewController.class)] extraParameters:nil];
 [[UIApplication sharedApplication] openURL:JLRGenRouteURL(FKDefaultRouteSchema, router)];
 ```
