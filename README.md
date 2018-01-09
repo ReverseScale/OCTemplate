@@ -230,10 +230,304 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 }
 ```
 
-### 📝 深入学习
+写了一个简单的 Category FKBaseRequest+Rac.h
+ViewModel中使用 RACCommand 封装调用：
+```
+- (RACCommand *)loginCommand {
+    if (!_loginCommand) {
+        @weakify(self);
+        _loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+            @strongify(self);
+      
+            return [[[FKLoginRequest alloc] initWithUsr:self.userAccount pwd:self.password] rac_requestSignal];
+        }];
+    }
+    return _loginCommand;
+}
+```
+Block方式交付业务
+```
+FKLoginRequest *loginRequest = [[FKLoginRequest alloc] initWithUsr:self.userAccount pwd:self.password];
+return [[[loginRequest rac_requestSignal] doNext:^(id  _Nullable x) {
+    
+    // 解析数据
+    [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"isLogin"];
+    
+}] materialize];
+```
+Delegate方式交付业务
+```
+FKLoginRequest *loginRequest = [[FKLoginRequest alloc] initWithUsr:self.userAccount pwd:self.password];
+// 数据请求响应代理 通过代理回调
+loginRequest.delegate = self;
+return [loginRequest rac_requestSignal];
 
-这里列出了Eureka最基本的操作，Eureka还有更多丰富的功能，如果想要深入学习Eureka，可以前往GitHub-Eureka主页！
+#pragma mark - YTKRequestDelegate
+- (void)requestFinished:(__kindof YTKBaseRequest *)request {
+    // 解析数据
+    [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"isLogin"];
+}
+```
 
+*交付什么样的数据 ?*
+现在诸如 JSONModel ，YYModel 之类的Json转Model的库也非常多，大多数Json对象，网络请求成功直接就被转成Model了
+然而 iOS应用架构谈 网络层设计方案 中给出了两种有意思的交付思路
+1. 使用 reformer 对数据进行清洗
+2. 去特定对象表征 （去Model）
+
+Casa文章中好处已经写得很详细了，通过不同的 reformer 来重塑和交付不同的业务数据，可以说是非常灵活了
+
+*使用 reformer 对数据进行清洗*
+在网络层封装 FKBaseRequest.h 中 给出了 FKBaseRequestFeformDelegate 接口来重塑数据
+```
+@protocol FKBaseRequestFeformDelegate <NSObject>
+
+/**
+ 自定义解析器解析响应参数
+
+ @param request 当前请求
+ @param jsonResponse 响应数据
+ @return 自定reformat数据
+ */
+- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse;
+
+@end
+然后在对应的 reformer 对数据进行重塑
+#pragma mark - FKBaseRequestFeformDelegate
+- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse {
+    if([request isKindOfClass:FKLoginRequest.class]){
+        // 在这里对json数据进行重新格式化
+    }
+    return jsonResponse;
+}
+```
+也可以直接在子类的 RequestManager 中覆盖父类方法达到一样的效果
+```
+/* FKLoginRequest.m */
+
+// 可以在这里对response 数据进行重新格式化， 也可以使用delegate 设置 reformattor
+- (id)reformJSONResponse:(id)jsonResponse {
+}
+```
+
+*去特定对象表征 （去Model）*
+这思路可以说是业界的泥石流了
+去Model也就是说，使用NSDictionary形式交付数据，对于网络层而言，只需要保持住原始数据即可，不需要主动转化成数据原型
+但是会存在一些小问题
+1. 去Model如何保持可读性？
+2. 复杂和多样的数据结构如何解析？
+
+Casa大神 提出了 使用EXTERN + Const 字符串形式，并建议字符串跟着reformer走，个人觉得很多时候API只需要一种解析格式，所以Demo跟着 APIManager 走，其他情况下常量字符串建议听从 Casa大神 的建议，
+常量定义：
+
+```
+/* FKBaseRequest.h */
+// 登录token key
+FOUNDATION_EXTERN NSString *FKLoginAccessTokenKey;
+
+/* FKBaseRequest.m */
+NSString *FKLoginAccessTokenKey = @"accessToken";
+```
+
+在 .h 和 .m 文件中要同时写太多代码，我们也可以使用局部常量的形式，只要在 .h 文件中定义即可
+
+```
+// 也可以写成 局部常量形式
+static const NSString *FKLoginAccessTokenKey2 = @"accessToken";
+最终那么我们的reformer可能会变成这样子
+- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse {
+    if([request isKindOfClass:FKLoginRequest.class]){
+        // 在这里对json数据进行重新格式化
+        
+        return @{
+                 FKLoginAccessTokenKey : jsonResponse[@"token"],
+                 };
+    }
+    return jsonResponse;
+}
+```
+
+复杂和多样的数据结构如何解析？
+有时候，reformer 交付过来的数据，我们需要解析的可能是字符串类型，也可能是NSNumber类型，也有可能是数组
+为此，笔者提供了一系列 Encode Decode方法，来降低解析的复杂度和安全性
+```
+#pragma mark - Encode Decode 方法
+// NSDictionary -> NSString
+FK_EXTERN NSString* DecodeObjectFromDic(NSDictionary *dic, NSString *key);
+// NSArray + index -> id
+FK_EXTERN id        DecodeSafeObjectAtIndex(NSArray *arr, NSInteger index);
+// NSDictionary -> NSString
+FK_EXTERN NSString     * DecodeStringFromDic(NSDictionary *dic, NSString *key);
+// NSDictionary -> NSString ？ NSString ： defaultStr
+FK_EXTERN NSString* DecodeDefaultStrFromDic(NSDictionary *dic, NSString *key,NSString * defaultStr);
+// NSDictionary -> NSNumber
+FK_EXTERN NSNumber     * DecodeNumberFromDic(NSDictionary *dic, NSString *key);
+// NSDictionary -> NSDictionary
+FK_EXTERN NSDictionary *DecodeDicFromDic(NSDictionary *dic, NSString *key);
+// NSDictionary -> NSArray
+FK_EXTERN NSArray      *DecodeArrayFromDic(NSDictionary *dic, NSString *key);
+FK_EXTERN NSArray      *DecodeArrayFromDicUsingParseBlock(NSDictionary *dic, NSString *key, id(^parseBlock)(NSDictionary *innerDic));
+
+#pragma mark - Encode Decode 方法
+// (nonull Key: nonull NSString) -> NSMutableDictionary
+FK_EXTERN void EncodeUnEmptyStrObjctToDic(NSMutableDictionary *dic,NSString *object, NSString *key);
+// nonull objec -> NSMutableArray
+FK_EXTERN void EncodeUnEmptyObjctToArray(NSMutableArray *arr,id object);
+// (nonull (Key ? key : defaultStr) : nonull Value) -> NSMutableDictionary
+FK_EXTERN void EncodeDefaultStrObjctToDic(NSMutableDictionary *dic,NSString *object, NSString *key,NSString * defaultStr);
+// (nonull Key: nonull object) -> NSMutableDictionary
+FK_EXTERN void EncodeUnEmptyObjctToDic(NSMutableDictionary *dic,NSObject *object, NSString *key);
+```
+我们的reformer可以写成这样子
+```
+#pragma mark - FKBaseRequestFeformDelegate
+- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse {
+    if([request isKindOfClass:FKLoginRequest.class]){
+        // 在这里对json数据进行重新格式化
+        
+        return @{
+                 FKLoginAccessTokenKey : DecodeStringFromDic(jsonResponse, @"token")
+                 };
+    }
+    return jsonResponse;
+}
+```
+解析有可能是这样子
+```
+NSString *token = DecodeStringFromDic(jsonResponse, FKLoginAccessTokenKey)
+```
+好了，至此我们解决了两个问题
+1. 以什么方式将数据交付给业务层
+答：delegate 最佳，block为次
+2. 交付什么样的数据
+答：纯字典，去Model
+
+#### 采用 JLRoutes 路由 对应用进行组件化解耦
+iOS应用架构谈 组件化方案 一文中 Casa 针对 蘑菇街组件化 提出了质疑，质疑点主要在这几方面
+1. App启动时组件需要注册URL
+2. URL调用组件方式不太好传递类似 UIImage 等非常规对象
+3. URL需要添加额外参数可读性差，所以没必要使用URL
+对于 App启动时组件需要注册URL 顾虑主要在于，注册的URL需要在应用生存周期内常驻内存，如果是注册Class还好些，如果注册的是实例，消耗的内存就非常可观了
+
+```
+#pragma mark - 路由表
+NSString *const FKNavPushRoute = @"/com_madao_navPush/:viewController";
+NSString *const FKNavPresentRoute = @"/com_madao_navPresent/:viewController";
+NSString *const FKNavStoryBoardPushRoute = @"/com_madao_navStoryboardPush/:viewController";
+NSString *const FKComponentsCallBackRoute = @"/com_madao_callBack/*";
+```
+而且JLRoutes 还支持 * 来进行通配，路由表如何编写大家可以自由发挥
+对应的路由事件 handler
+
+```
+// push
+// 路由 /com_madao_navPush/:viewController
+[[JLRoutes globalRoutes] addRoute:FKNavPushRoute handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self _handlerSceneWithPresent:NO parameters:parameters];
+        
+    });
+    return YES;
+}];
+
+// present
+// 路由 /com_madao_navPresent/:viewController
+[[JLRoutes globalRoutes] addRoute:FKNavPresentRoute handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self _handlerSceneWithPresent:YES parameters:parameters];
+        
+    });
+    return YES;
+}];
+
+#pragma mark - Private
+/// 处理跳转事件
+- (void)_handlerSceneWithPresent:(BOOL)isPresent parameters:(NSDictionary *)parameters {
+    // 当前控制器
+    NSString *controllerName = [parameters objectForKey:FKControllerNameRouteParam];
+    UIViewController *currentVC = [self _currentViewController];
+    UIViewController *toVC = [[NSClassFromString(controllerName) alloc] init];
+    toVC.params = parameters;
+    if (currentVC && currentVC.navigationController) {
+        if (isPresent) {
+            [currentVC.navigationController presentViewController:toVC animated:YES completion:nil];
+        }else
+        {
+            [currentVC.navigationController pushViewController:toVC animated:YES];
+        }
+    }
+}
+```
+
+通过URL中传入的组件名动态注册，处理相应跳转事件，并不需要每个组件一一注册
+使用URL路由，必然URL会散落到代码各个地方
+
+```
+NSString *key = @"key";
+NSString *value = @"value";
+NSString *url = [NSString stringWithFormat:@"/com_madao_navPush/%@?%@=%@", NSStringFromClass(ViewController.class), key, value];
+[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+```
+诸如此类丑陋的代码，散落在各个地方的话简直会让人头皮发麻, 所以笔者在 JLRoutes+GenerateURL.h 写了一些 Helper方法
+```
+/**
+ 避免 URL 散落各处， 集中生成URL
+ 
+ @param pattern 匹配模式
+ @param parameters 附带参数
+ @return URL字符串
+ */
++ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters;
+
+/**
+ 避免 URL 散落各处， 集中生成URL
+ 额外参数将被 ?key=value&key2=value2 样式给出
+ 
+ @param pattern 匹配模式
+ @param parameters 附加参数
+ @param extraParameters 额外参数
+ @return URL字符串
+ */
++ (NSString *)fk_generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters extraParameters:(NSDictionary *)extraParameters;
+
+/**
+ 解析NSURL对象中的请求参数
+http://madao?param1=value1¶m2=value2 解析成 @{param1:value1, param2:value2}
+ @param URL NSURL对象
+ @return URL字符串
+ */
++ (NSDictionary *)fk_parseParamsWithURL:(NSURL *)URL;
+
+/**
+ 将参数对象进行url编码
+ 将@{param1:value1, param2:value2} 转换成 ?param1=value1&param2=value2
+ @param dic 参数对象
+ @return URL字符串
+ */
++ (NSString *)fk_mapDictionaryToURLQueryString:(NSDictionary *)dic;
+```
+宏定义Helper
+```
+#undef JLRGenRoute
+#define JLRGenRoute(Schema, path) \
+([NSString stringWithFormat: @"%@:/%@", \
+Schema, \
+path])
+
+#undef JLRGenRouteURL
+#define JLRGenRouteURL(Schema, path) \
+([NSURL URLWithString: \
+JLRGenRoute(Schema, path)])
+```
+最终我们的调用可以变成
+```
+NSString *router = [JLRoutes fk_generateURLWithPattern:FKNavPushRoute parameters:@[NSStringFromClass(ViewController.class)] extraParameters:nil];
+[[UIApplication sharedApplication] openURL:JLRGenRouteURL(FKDefaultRouteSchema, router)];
+```
+
+### 📝 原文地址
+
+简书博客：http://www.jianshu.com/p/921dd65e79cb
 
 ### ⚖ 协议
 
