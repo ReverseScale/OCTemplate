@@ -129,18 +129,18 @@ Method Swizzling 业界已经有非常成熟的三方库 Aspects, 所以Demo代�
 
 #### View层采用 MVVM 设计模式，使用 ReactiveObjC 进行数据绑定
 
-*MVC*
+*-MVC-*
 
 作为老牌思想MVC，大家早已耳熟能详，MVC素有 Massive VC之称，随着业务增加，Controller将会越来越复杂，最终Controller会变成一个"神类", 即有网络请求等代码，又充斥着大量业务逻辑，所以为Controller减负，在某些情况下变得势在必行
 
-*MVVM*
+*-MVVM-*
 
 MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部分：Model和ViewModel (注：胖Model 是指包含了一些弱业务逻辑的Model)
 胖Model实际上是为了减负 Controller 而存在的，而 MVVM 是为了拆分胖Model , 最终目的都是为了减负Controller。
 
 我们知道，苹果MVC并没有专门为网络层代码分专门的层级，按照以往习惯，大家都写在了Controller 中，这也是Controller 变Massive得元凶之一，现在我们可以将网络请求等诸如此类的代码放到ViewModel中了 （文章后半部分将会描述ViewModel中的网络请求）
 
-*数据流向*
+*-数据流向-*
 
 正常的网络请求获取数据，然后更新View自然不必多说，那么如果View产生了数据要怎么把数据给到Model，由于View不直接持有ViewModel，所以我们需要有个桥梁 ReactiveCocoa, 通过 Signal 来和 ViewModel 通信，这个过程我们使用 通知 或者 Target-Action也可以实现相同的效果，只不过没有 ReactiveCocoa 如此方便罢了
 
