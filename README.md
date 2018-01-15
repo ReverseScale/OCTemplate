@@ -546,6 +546,8 @@ NSString *router = [JLRoutes fk_generateURLWithPattern:FKNavPushRoute parameters
 ### 📝 原文地址
 
 简书博客：http://www.jianshu.com/p/921dd65e79cb
+Casa Taloyum：https://casatwy.com/modulization_in_action.html
+整理制作
 
 ----
 ### ⚖ 协议
