@@ -1,12 +1,14 @@
 # OCTemplate
 
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+
+[EN](#Requirements) | [中文](#中文说明)
+
 Framework Design Based on Objective-C Implementation, YTKNetwork Network + AOP Substitution Base + MVVM + ReactiveObjC + JLRoutes Components 🤖
 
 > I understand the framework, like the computer's motherboard, building the framework of the building, the infrastructure of the road infrastructure, the framework take a good, can directly affect the developer's development mood, but also make the project robustness and scalability greatly enhanced.
 
 ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41712771.jpg)
-
-![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
 ----
 ### 🤖 Requirements
