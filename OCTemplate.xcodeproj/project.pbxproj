@@ -14,7 +14,7 @@
 		3450E3541FF4D9F400917F30 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* TestViewController.m */; };
 		3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3450E3531FF4D9F400917F30 /* TestViewController.xib */; };
 		3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656B1FF221FB0061A221 /* AppDelegate.m */; };
-		3477656F1FF221FB0061A221 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656E1FF221FB0061A221 /* ViewController.m */; };
+		3477656F1FF221FB0061A221 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656E1FF221FB0061A221 /* ExampleViewController.m */; };
 		347765721FF221FB0061A221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765701FF221FB0061A221 /* Main.storyboard */; };
 		347765741FF221FB0061A221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347765731FF221FB0061A221 /* Assets.xcassets */; };
 		347765771FF221FB0061A221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765751FF221FB0061A221 /* LaunchScreen.storyboard */; };
@@ -82,8 +82,8 @@
 		347765671FF221FB0061A221 /* OCTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3477656A1FF221FB0061A221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3477656B1FF221FB0061A221 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3477656D1FF221FB0061A221 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3477656E1FF221FB0061A221 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3477656D1FF221FB0061A221 /* ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
+		3477656E1FF221FB0061A221 /* ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		347765711FF221FB0061A221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		347765731FF221FB0061A221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347765761FF221FB0061A221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -358,8 +358,8 @@
 				347765D61FF34BC40061A221 /* TestLoginViewController.h */,
 				347765D71FF34BC40061A221 /* TestLoginViewController.m */,
 				347765D81FF34BC40061A221 /* TestLoginViewController.xib */,
-				3477656D1FF221FB0061A221 /* ViewController.h */,
-				3477656E1FF221FB0061A221 /* ViewController.m */,
+				3477656D1FF221FB0061A221 /* ExampleViewController.h */,
+				3477656E1FF221FB0061A221 /* ExampleViewController.m */,
 				344F4F5520902EEE007BCA66 /* OtherViewController.h */,
 				344F4F5620902EEE007BCA66 /* OtherViewController.m */,
 				3450E3511FF4D9F400917F30 /* TestViewController.h */,
@@ -728,7 +728,7 @@
 				347765E71FF34ED20061A221 /* TestLoginButton.m in Sources */,
 				344F4F5720902EEE007BCA66 /* OtherViewController.m in Sources */,
 				3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */,
-				3477656F1FF221FB0061A221 /* ViewController.m in Sources */,
+				3477656F1FF221FB0061A221 /* ExampleViewController.m in Sources */,
 				347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */,
 				347765EB1FF361890061A221 /* TestLoginAccountInputTableViewCell.m in Sources */,
 				347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */,

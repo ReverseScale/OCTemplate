@@ -8,6 +8,7 @@
 
 #import "AppDelegate+Extension.h"
 #import <WebKit/WebKit.h>
+#import <YTKNetwork.h>
 
 #pragma mark - 初始化 SVProgressHUD 配置
 @implementation AppDelegate(SVProgressHUD)

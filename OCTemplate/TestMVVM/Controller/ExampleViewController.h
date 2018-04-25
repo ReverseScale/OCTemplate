@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController<AOPViewControllerProtocol>
-
+@interface ExampleViewController : UIViewController<AOPViewControllerProtocol>
 
 @end
 

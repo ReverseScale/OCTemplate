@@ -6,12 +6,12 @@
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ExampleViewController.h"
 #import "SVProgressHUD+Helper.h"
 #import "AppDelegate.h"
 //#import "TestViewController.h" //通过路由控制，就不需要引用要跳转的控制器了
 
-@interface ViewController ()
+@interface ExampleViewController ()
 // 退出登录
 @property (nonatomic, strong) UIButton *logoutBtn;
 
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIButton *pushBtn;
 @end
 
-@implementation ViewController
+@implementation ExampleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

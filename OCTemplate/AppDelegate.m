@@ -7,12 +7,24 @@
 //
 
 #import "AppDelegate.h"
-#import <YTKNetwork.h>
-
-#import "TestLoginViewController.h"
 #import "AppDelegate+Extension.h"
 
 NSString *const TestLoginStateChangedNotificationKey = @"TestLoginStateChangedNotificationKey";
+
+NSString *const ViewController_login = @"TestLoginViewController";
+NSString *const ViewController_example = @"ExampleViewController";
+NSString *const ViewController_other = @"OtherViewController";
+
+NSString *const Title_example = @"示例";
+NSString *const Title_other = @"其他";
+
+NSString *const icon_example = @"icon_tabbar_component";
+NSString *const icon_example_selected = @"icon_tabbar_component_selected";
+
+NSString *const Icon_other = @"icon_tabbar_lab";
+NSString *const Icon_other_selected = @"icon_tabbar_lab_selected";
+
+NSString *const Key_login_save = @"isLogin";
 
 @interface AppDelegate()
 @property (nonatomic, strong) UITabBarController *tabbarController;
@@ -85,7 +97,7 @@ NSString *const TestLoginStateChangedNotificationKey = @"TestLoginStateChangedNo
     //注册通知
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:TestLoginStateChangedNotificationKey object:nil] subscribeNext:^(NSNotification * _Nullable noti) {
         
-        NSNumber * number = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"];
+        NSNumber * number = [[NSUserDefaults standardUserDefaults] objectForKey:Key_login_save];
         BOOL isLogin = NO;
         if (number) {
             isLogin = number.boolValue;
@@ -95,7 +107,7 @@ NSString *const TestLoginStateChangedNotificationKey = @"TestLoginStateChangedNo
             [self.window setRootViewController:self.tabbarController];
         } else {
             //未登录
-            [self.window setRootViewController:[[NSClassFromString(@"TestLoginViewController") alloc] init]];
+            [self.window setRootViewController:[[NSClassFromString(ViewController_login) alloc] init]];
         }
     }];
     
@@ -111,9 +123,9 @@ NSString *const TestLoginStateChangedNotificationKey = @"TestLoginStateChangedNo
         
         _tabbarController = [[UITabBarController alloc] init];
         
-        UINavigationController *navController = [self getNavigationControllerWithViewController:[[NSClassFromString(@"ViewController") alloc] init] title:@"示例" tabBarItemImageName:@"icon_tabbar_component" tabBarItemSelectedImageName:@"icon_tabbar_component_selected"];
+        UINavigationController *navController = [self getNavigationControllerWithViewController:[[NSClassFromString(ViewController_example) alloc] init] title:Title_example tabBarItemImageName:icon_example tabBarItemSelectedImageName:icon_example_selected];
         
-        UINavigationController *navOtherController = [self getNavigationControllerWithViewController:[[NSClassFromString(@"OtherViewController") alloc] init] title:@"其他" tabBarItemImageName:@"icon_tabbar_lab" tabBarItemSelectedImageName:@"icon_tabbar_lab_selected"];
+        UINavigationController *navOtherController = [self getNavigationControllerWithViewController:[[NSClassFromString(ViewController_other) alloc] init] title:Title_other tabBarItemImageName:Icon_other tabBarItemSelectedImageName:Icon_other_selected];
         
         [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
         [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:kBlcyColor} forState:UIControlStateSelected];
