@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushViewController">
             <connections>
+                <outlet property="paramsLabel" destination="aOu-JR-OfC" id="tw7-3v-mLd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,6 +40,12 @@
                         <constraint firstAttribute="width" constant="100" id="cZU-LN-Wjc"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOu-JR-OfC">
+                    <rect key="frame" x="173" y="406.5" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -46,8 +53,10 @@
                 <constraint firstItem="iLo-ur-xMy" firstAttribute="top" secondItem="Jlo-pU-xWz" secondAttribute="bottom" constant="4" id="E7k-EM-v3t"/>
                 <constraint firstItem="Jlo-pU-xWz" firstAttribute="top" secondItem="Ums-eS-aU3" secondAttribute="bottom" constant="20" id="Goy-Ik-kVw"/>
                 <constraint firstItem="Ums-eS-aU3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="Hkt-1B-pkO"/>
+                <constraint firstItem="aOu-JR-OfC" firstAttribute="top" secondItem="iLo-ur-xMy" secondAttribute="bottom" constant="10" id="MLr-3l-c6b"/>
                 <constraint firstItem="Ums-eS-aU3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ohh-IJ-JLC"/>
                 <constraint firstItem="iLo-ur-xMy" firstAttribute="centerX" secondItem="Jlo-pU-xWz" secondAttribute="centerX" id="XtC-vt-j5x"/>
+                <constraint firstItem="aOu-JR-OfC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fdI-wT-UAs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>

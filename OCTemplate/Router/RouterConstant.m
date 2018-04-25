@@ -16,7 +16,7 @@ NSString *const HTTPRouteSchema = @"http";
 NSString *const HTTPsRouteSchema = @"https";
 
 NSString *const ComponentsCallBackHandlerRouteSchema = @"AppCallBack";
-NSString *const WebHandlerRouteSchema = @"yinzhi";
+NSString *const WebHandlerRouteSchema = @"Custom";
 NSString *const UnknownHandlerRouteSchema = @"UnKnown";
 
 #pragma mark - 路由表

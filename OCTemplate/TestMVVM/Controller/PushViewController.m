@@ -9,6 +9,7 @@
 #import "PushViewController.h"
 
 @interface PushViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *paramsLabel;
 
 @end
 
@@ -16,9 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
     self.title = @"推出页";
+    
+    self.paramsLabel.text = [NSString stringWithFormat:@"参数 key:%@", self.params[@"key"]];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

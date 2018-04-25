@@ -83,11 +83,15 @@
     // push
     [[self.pushBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         // 路由链接
-//        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[NSStringFromClass(PushViewController.class)] extraParameters:nil];
-        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"] extraParameters:nil];
+        
+//        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"]];
+        
+        NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"] extraParameters:@{@"key":@"value"}];
+        
         [[RACScheduler mainThreadScheduler] schedule:^{
+//            OCTemplate://com_R_S_navPush/PushViewController?key=value
             // 路由跳转
-            [[UIApplication sharedApplication] openURL:JLRGenRouteURL(DefaultRouteSchema, router)];
+            [[UIApplication sharedApplication] openURL:JLRGenRouteURL(DefaultRouteSchema, routerDetail)];
         }];
     }];
     
