@@ -6,7 +6,7 @@
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "TestLoginViewController.h"
+#import "LoginViewController.h"
 
 #import "AppDelegate.h"
 
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
     kLoginInputType_password = 1 //密码
 };
 
-@interface TestLoginViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface LoginViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 // viewModel
 @property (nonatomic, strong) TestLoginViewModel *viewModel;
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
 
 @end
 
-@implementation TestLoginViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,7 +137,7 @@ typedef NS_ENUM(NSInteger, kLoginInputType) {
 @end
 
 #pragma mark - UITableViewDelegate
-@implementation TestLoginViewController(UITableViewDelegate)
+@implementation LoginViewController(UITableViewDelegate)
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.viewModel.cellTitleArray.count;

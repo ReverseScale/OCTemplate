@@ -30,8 +30,8 @@
 		347765C61FF342AB0061A221 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765C51FF342AB0061A221 /* NSObject+Extension.m */; };
 		347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765CA1FF344D10061A221 /* UIView+Extension.m */; };
 		347765CE1FF3453D0061A221 /* AOPViewIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765CD1FF3453D0061A221 /* AOPViewIntercepter.m */; };
-		347765D91FF34BC40061A221 /* TestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765D71FF34BC40061A221 /* TestLoginViewController.m */; };
-		347765DA1FF34BC40061A221 /* TestLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765D81FF34BC40061A221 /* TestLoginViewController.xib */; };
+		347765D91FF34BC40061A221 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765D71FF34BC40061A221 /* LoginViewController.m */; };
+		347765DA1FF34BC40061A221 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765D81FF34BC40061A221 /* LoginViewController.xib */; };
 		347765E01FF34D2C0061A221 /* TestLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */; };
 		347765E41FF34DD00061A221 /* TestLoginInputFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765E31FF34DD00061A221 /* TestLoginInputFooterView.m */; };
 		347765E71FF34ED20061A221 /* TestLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765E61FF34ED20061A221 /* TestLoginButton.m */; };
@@ -120,9 +120,9 @@
 		347765CD1FF3453D0061A221 /* AOPViewIntercepter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPViewIntercepter.m; sourceTree = "<group>"; };
 		347765CF1FF345FC0061A221 /* AOPTableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPTableViewProtocol.h; sourceTree = "<group>"; };
 		347765D01FF346300061A221 /* AOPTableViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPTableViewCellProtocol.h; sourceTree = "<group>"; };
-		347765D61FF34BC40061A221 /* TestLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewController.h; sourceTree = "<group>"; };
-		347765D71FF34BC40061A221 /* TestLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewController.m; sourceTree = "<group>"; };
-		347765D81FF34BC40061A221 /* TestLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLoginViewController.xib; sourceTree = "<group>"; };
+		347765D61FF34BC40061A221 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		347765D71FF34BC40061A221 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		347765D81FF34BC40061A221 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		347765DE1FF34D2C0061A221 /* TestLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewModel.h; sourceTree = "<group>"; };
 		347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewModel.m; sourceTree = "<group>"; };
 		347765E21FF34DD00061A221 /* TestLoginInputFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginInputFooterView.h; sourceTree = "<group>"; };
@@ -355,9 +355,9 @@
 		347765DC1FF34C860061A221 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				347765D61FF34BC40061A221 /* TestLoginViewController.h */,
-				347765D71FF34BC40061A221 /* TestLoginViewController.m */,
-				347765D81FF34BC40061A221 /* TestLoginViewController.xib */,
+				347765D61FF34BC40061A221 /* LoginViewController.h */,
+				347765D71FF34BC40061A221 /* LoginViewController.m */,
+				347765D81FF34BC40061A221 /* LoginViewController.xib */,
 				3477656D1FF221FB0061A221 /* ExampleViewController.h */,
 				3477656E1FF221FB0061A221 /* ExampleViewController.m */,
 				344F4F5520902EEE007BCA66 /* OtherViewController.h */,
@@ -545,7 +545,7 @@
 				347765EC1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib in Resources */,
 				347765771FF221FB0061A221 /* LaunchScreen.storyboard in Resources */,
 				347765F11FF363560061A221 /* TestLoginPwdInputTableViewCell.xib in Resources */,
-				347765DA1FF34BC40061A221 /* TestLoginViewController.xib in Resources */,
+				347765DA1FF34BC40061A221 /* LoginViewController.xib in Resources */,
 				347765741FF221FB0061A221 /* Assets.xcassets in Resources */,
 				3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */,
 				347765721FF221FB0061A221 /* Main.storyboard in Resources */,
@@ -749,7 +749,7 @@
 				347765BB1FF33F6F0061A221 /* SVProgressHUD+Helper.m in Sources */,
 				347766021FF36BC80061A221 /* FKBaseRequestIntercepter.m in Sources */,
 				347766011FF36BC80061A221 /* FKBaseRequest+Rac.m in Sources */,
-				347765D91FF34BC40061A221 /* TestLoginViewController.m in Sources */,
+				347765D91FF34BC40061A221 /* LoginViewController.m in Sources */,
 				347765CE1FF3453D0061A221 /* AOPViewIntercepter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

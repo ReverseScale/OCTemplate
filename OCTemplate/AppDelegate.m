@@ -11,7 +11,7 @@
 
 NSString *const TestLoginStateChangedNotificationKey = @"TestLoginStateChangedNotificationKey";
 
-NSString *const ViewController_login = @"TestLoginViewController";
+NSString *const ViewController_login = @"LoginViewController";
 NSString *const ViewController_example = @"ExampleViewController";
 NSString *const ViewController_other = @"OtherViewController";
 

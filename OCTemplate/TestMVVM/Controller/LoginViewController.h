@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestLoginViewController : UIViewController<AOPViewControllerProtocol>
+@interface LoginViewController : UIViewController<AOPViewControllerProtocol>
 
 @end
