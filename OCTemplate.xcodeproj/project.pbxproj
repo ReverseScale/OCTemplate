@@ -11,8 +11,8 @@
 		344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */; };
 		3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3481FF4BBA600917F30 /* RouterConstant.m */; };
 		3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */; };
-		3450E3541FF4D9F400917F30 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* TestViewController.m */; };
-		3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3450E3531FF4D9F400917F30 /* TestViewController.xib */; };
+		3450E3541FF4D9F400917F30 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* PushViewController.m */; };
+		3450E3551FF4D9F400917F30 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3450E3531FF4D9F400917F30 /* PushViewController.xib */; };
 		3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656B1FF221FB0061A221 /* AppDelegate.m */; };
 		3477656F1FF221FB0061A221 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656E1FF221FB0061A221 /* ExampleViewController.m */; };
 		347765721FF221FB0061A221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765701FF221FB0061A221 /* Main.storyboard */; };
@@ -76,9 +76,9 @@
 		3450E3481FF4BBA600917F30 /* RouterConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterConstant.m; sourceTree = "<group>"; };
 		3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+GenerateURL.m"; sourceTree = "<group>"; };
 		3450E34E1FF4BD8D00917F30 /* JLRoutes+GenerateURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLRoutes+GenerateURL.h"; sourceTree = "<group>"; };
-		3450E3511FF4D9F400917F30 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		3450E3521FF4D9F400917F30 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		3450E3531FF4D9F400917F30 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		3450E3511FF4D9F400917F30 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		3450E3521FF4D9F400917F30 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		3450E3531FF4D9F400917F30 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		347765671FF221FB0061A221 /* OCTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3477656A1FF221FB0061A221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3477656B1FF221FB0061A221 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -362,9 +362,9 @@
 				3477656E1FF221FB0061A221 /* ExampleViewController.m */,
 				344F4F5520902EEE007BCA66 /* OtherViewController.h */,
 				344F4F5620902EEE007BCA66 /* OtherViewController.m */,
-				3450E3511FF4D9F400917F30 /* TestViewController.h */,
-				3450E3521FF4D9F400917F30 /* TestViewController.m */,
-				3450E3531FF4D9F400917F30 /* TestViewController.xib */,
+				3450E3511FF4D9F400917F30 /* PushViewController.h */,
+				3450E3521FF4D9F400917F30 /* PushViewController.m */,
+				3450E3531FF4D9F400917F30 /* PushViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -547,7 +547,7 @@
 				347765F11FF363560061A221 /* TestLoginPwdInputTableViewCell.xib in Resources */,
 				347765DA1FF34BC40061A221 /* LoginViewController.xib in Resources */,
 				347765741FF221FB0061A221 /* Assets.xcassets in Resources */,
-				3450E3551FF4D9F400917F30 /* TestViewController.xib in Resources */,
+				3450E3551FF4D9F400917F30 /* PushViewController.xib in Resources */,
 				347765721FF221FB0061A221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -738,7 +738,7 @@
 				347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */,
 				347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */,
 				3477657A1FF221FB0061A221 /* main.m in Sources */,
-				3450E3541FF4D9F400917F30 /* TestViewController.m in Sources */,
+				3450E3541FF4D9F400917F30 /* PushViewController.m in Sources */,
 				347765E41FF34DD00061A221 /* TestLoginInputFooterView.m in Sources */,
 				3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */,
 				347765B21FF32D1B0061A221 /* UIViewController+Extension.m in Sources */,

@@ -9,7 +9,7 @@
 #import "ExampleViewController.h"
 #import "SVProgressHUD+Helper.h"
 #import "AppDelegate.h"
-//#import "TestViewController.h" //通过路由控制，就不需要引用要跳转的控制器了
+//#import "PushViewController.h" //通过路由控制，就不需要引用要跳转的控制器了
 
 @interface ExampleViewController ()
 // 退出登录
@@ -83,8 +83,8 @@
     // push
     [[self.pushBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         // 路由链接
-//        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[NSStringFromClass(TestViewController.class)] extraParameters:nil];
-        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"TestViewController"] extraParameters:nil];
+//        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[NSStringFromClass(PushViewController.class)] extraParameters:nil];
+        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"] extraParameters:nil];
         [[RACScheduler mainThreadScheduler] schedule:^{
             // 路由跳转
             [[UIApplication sharedApplication] openURL:JLRGenRouteURL(DefaultRouteSchema, router)];

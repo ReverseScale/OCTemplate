@@ -1,18 +1,18 @@
 //
-//  TestViewController.m
+//  PushViewController.m
 //  OCTemplate
 //
 //  Created by WhatsXie on 2017/12/28.
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "PushViewController.h"
 
-@interface TestViewController ()
+@interface PushViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation PushViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

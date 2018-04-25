@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  PushViewController.h
 //  OCTemplate
 //
 //  Created by WhatsXie on 2017/12/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
+@interface PushViewController : UIViewController
 
 @end
