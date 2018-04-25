@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"示例";
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)didReceiveMemoryWarning {
