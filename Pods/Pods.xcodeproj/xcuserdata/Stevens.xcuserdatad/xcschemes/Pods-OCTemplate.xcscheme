@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '16D9C471CF6E87C51374BED4F8E5B105'
-               BlueprintName = 'Pods-OCTemplate'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-OCTemplate.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AAB2F90C027109B254CED4ADD2A937E8"
+               BlueprintName = "Pods-OCTemplate"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-OCTemplate.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

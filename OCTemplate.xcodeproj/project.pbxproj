@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		344F4F5720902EEE007BCA66 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5620902EEE007BCA66 /* OtherViewController.m */; };
 		344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */; };
+		344F4F5F20907448007BCA66 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5D20907448007BCA66 /* OtherViewController.m */; };
 		3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3481FF4BBA600917F30 /* RouterConstant.m */; };
 		3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */; };
 		3450E3541FF4D9F400917F30 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* PushViewController.m */; };
@@ -68,10 +68,10 @@
 
 /* Begin PBXFileReference section */
 		1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
-		344F4F5520902EEE007BCA66 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
-		344F4F5620902EEE007BCA66 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		344F4F5920904E16007BCA66 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
 		344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
+		344F4F5C20907448007BCA66 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		344F4F5D20907448007BCA66 /* OtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		3450E3471FF4BBA600917F30 /* RouterConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterConstant.h; sourceTree = "<group>"; };
 		3450E3481FF4BBA600917F30 /* RouterConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterConstant.m; sourceTree = "<group>"; };
 		3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+GenerateURL.m"; sourceTree = "<group>"; };
@@ -360,8 +360,8 @@
 				347765D81FF34BC40061A221 /* LoginViewController.xib */,
 				3477656D1FF221FB0061A221 /* ExampleViewController.h */,
 				3477656E1FF221FB0061A221 /* ExampleViewController.m */,
-				344F4F5520902EEE007BCA66 /* OtherViewController.h */,
-				344F4F5620902EEE007BCA66 /* OtherViewController.m */,
+				344F4F5C20907448007BCA66 /* OtherViewController.h */,
+				344F4F5D20907448007BCA66 /* OtherViewController.m */,
 				3450E3511FF4D9F400917F30 /* PushViewController.h */,
 				3450E3521FF4D9F400917F30 /* PushViewController.m */,
 				3450E3531FF4D9F400917F30 /* PushViewController.xib */,
@@ -580,7 +580,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -726,9 +726,9 @@
 				347765BD1FF33F6F0061A221 /* UIImage+FKColor.m in Sources */,
 				3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */,
 				347765E71FF34ED20061A221 /* TestLoginButton.m in Sources */,
-				344F4F5720902EEE007BCA66 /* OtherViewController.m in Sources */,
 				3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */,
 				3477656F1FF221FB0061A221 /* ExampleViewController.m in Sources */,
+				344F4F5F20907448007BCA66 /* OtherViewController.m in Sources */,
 				347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */,
 				347765EB1FF361890061A221 /* TestLoginAccountInputTableViewCell.m in Sources */,
 				347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */,

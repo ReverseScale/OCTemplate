@@ -19,6 +19,8 @@ target 'OCTemplate' do
   pod 'SVProgressHUD', '~> 2.2.2'
   # 自动布局
   pod 'Masonry', '~> 1.0.2'
+  # 自动卡片布局
+  pod 'AutoAlignButtonTools', '~> 0.3.0'
   
 
   # Pods for OCTemplate

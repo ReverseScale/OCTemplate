@@ -7,8 +7,9 @@
 //
 
 #import "OtherViewController.h"
+#import "AutoAlignButtonView.h"
 
-@interface OtherViewController ()
+@interface OtherViewController ()<AutoAlignButtonViewDelegate>
 
 @end
 
@@ -16,26 +17,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"其他";
-
+    
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupAutoAlignButton];
+}
+
+- (void)setupAutoAlignButton {
+    AutoAlignButtonView *view = [AutoAlignButtonView new];
+    view.dataTitleArray = @[@"深度调用", @"相互跳转", @"组件解耦",@"多平台", @"热修复", @"埋点统计",@"过程监控"];
+    view.dataImagesArray = @[@"icon_router_01", @"icon_router_02", @"icon_router_03",@"icon_router_04", @"icon_router_05", @"icon_router_06", @"icon_router_07"];
+    view.frame = CGRectMake(0, 100, self.view.bounds.size.width, 0);
+    view.isScratchableLatex = YES;
+    view.countHorizonal = 3;
+    view.delegate = self;
+    [self.view addSubview:view];
+}
+
+- (void)btnDelegateAction:(UIButton *)button {
+    NSLog(@"%@", [NSString stringWithFormat:@"你点击了<%@>",button.titleLabel.text]);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
