@@ -19,10 +19,11 @@ Framework Design Based on Objective-C Implementation, YTKNetwork Network + AOP S
 
 ----
 ### 🎨 Why test the UI?
-|1.Presentation page | 2.Presentation page | 3.Presentation page |
-| ------------- | ------------- | ------------- | 
-| ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41430725.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/87254954.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/2391827.jpg) | 
-| Login View | Example Show | Jump Page |
+
+|1. Presentation page | 2. Presentation page | 3. Presentation page | 4. Description page |
+| ------------- | ------------- | ------------- | ------------- | 
+| ![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935dd3886f?w=358&h=704&f=png&s=34082) | ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1ec1003f018?w=358&h=704&f=png&s=29004) | ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1f021208dde?w=358&h=704&f=png&s=42923) |  ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1fd987f8a76?w=358&h=704&f=png&s=38676) | 
+| Login View | Sample Show | Jump Page | Introduction Page |
 
 ----
 ### 🎯 Installation
@@ -625,10 +626,10 @@ SOFTWARE.
 ----
 ### 🎨 测试 UI 什么样子？
 
-|1.展示页 |2.展示页 |3.展示页 |
-| ------------- | ------------- | ------------- | 
-| ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41430725.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/87254954.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/2391827.jpg) | 
-| 登录视图 | 示例展示 | 跳转页面 | 
+|1.展示页 |2.展示页 |3.展示页 |4.说明页 |
+| ------------- | ------------- | ------------- | ------------- | 
+| ![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935dd3886f?w=358&h=704&f=png&s=34082) | ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1ec1003f018?w=358&h=704&f=png&s=29004) | ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1f021208dde?w=358&h=704&f=png&s=42923) |  ![](https://user-gold-cdn.xitu.io/2018/4/25/162fc1fd987f8a76?w=358&h=704&f=png&s=38676) | 
+| 登录视图 | 示例展示 | 跳转页面 | 介绍页面 | 
 
 ----
 ### 🎯 安装方法
