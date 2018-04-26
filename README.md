@@ -50,6 +50,17 @@ use_frameworks!
   pod 'SVProgressHUD', '~> 2.2.2'
   # Automatic layout
   pod 'Masonry', '~> 1.0.2'
+  # React component
+  # Modify the following `:path' based on the actual path
+  pod 'React', :path => './react/node_modules/react-native', :subspecs => [
+  'Core',
+  'RCTText',
+  'RCTNetwork',
+  'RCTWebSocket', # This module is for debugging
+  # Continue to add the modules you need here
+  ]
+  # If your RN version >= 0.42.0, please add this line
+  #  pod "Yoga", :path => "./node_modules/react-native/ReactCommon/yoga"
 ```
 
 ----
@@ -656,6 +667,18 @@ use_frameworks!
   pod 'SVProgressHUD', '~> 2.2.2'
   # 自动布局
   pod 'Masonry', '~> 1.0.2'
+  # React 组件
+  # 根据实际路径修改下面的`:path`
+  pod 'React', :path => './react/node_modules/react-native', :subspecs => [
+  'Core',
+  'RCTText',
+  'RCTNetwork',
+  'RCTWebSocket', # 这个模块是用于调试功能的
+  # 在这里继续添加你所需要的模块
+  ]
+  # 如果你的RN版本 >= 0.42.0，请加入下面这行
+  #  pod "Yoga", :path => "./node_modules/react-native/ReactCommon/yoga"
+  
 ```
 
 ----
