@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3422B4BD20917F9B0098F9D2 /* ReactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B4BC20917F9B0098F9D2 /* ReactViewController.m */; };
 		344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */; };
 		344F4F5F20907448007BCA66 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5D20907448007BCA66 /* OtherViewController.m */; };
 		3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3481FF4BBA600917F30 /* RouterConstant.m */; };
@@ -68,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3422B4BB20917F970098F9D2 /* ReactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactViewController.h; sourceTree = "<group>"; };
+		3422B4BC20917F9B0098F9D2 /* ReactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactViewController.m; sourceTree = "<group>"; };
 		344F4F5920904E16007BCA66 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
 		344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
 		344F4F5C20907448007BCA66 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
@@ -365,6 +368,8 @@
 				3450E3511FF4D9F400917F30 /* PushViewController.h */,
 				3450E3521FF4D9F400917F30 /* PushViewController.m */,
 				3450E3531FF4D9F400917F30 /* PushViewController.xib */,
+				3422B4BB20917F970098F9D2 /* ReactViewController.h */,
+				3422B4BC20917F9B0098F9D2 /* ReactViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 				347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */,
 				347765F01FF363560061A221 /* TestLoginPwdInputTableViewCell.m in Sources */,
 				347766081FF36D100061A221 /* FunctionDefine.m in Sources */,
+				3422B4BD20917F9B0098F9D2 /* ReactViewController.m in Sources */,
 				347766051FF36C120061A221 /* FKBaseRequest.m in Sources */,
 				347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */,
 				347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */,

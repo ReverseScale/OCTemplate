@@ -86,7 +86,7 @@
         
 //        NSString *router = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"]];
         
-        NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"PushViewController"] extraParameters:@{@"key":@"value"}];
+        NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"ReactViewController"] extraParameters:@{@"key":@"value"}];
         
         [[RACScheduler mainThreadScheduler] schedule:^{
 //            OCTemplate://com_R_S_navPush/PushViewController?key=value

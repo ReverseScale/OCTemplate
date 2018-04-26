@@ -18,6 +18,15 @@ PODS:
   - AutoAlignButtonTools (0.3.0)
   - JLRoutes (2.0.5)
   - Masonry (1.0.2)
+  - React/Core (0.39.2):
+    - React/CSSLayout
+  - React/CSSLayout (0.39.2)
+  - React/RCTNetwork (0.39.2):
+    - React/Core
+  - React/RCTText (0.39.2):
+    - React/Core
+  - React/RCTWebSocket (0.39.2):
+    - React/Core
   - ReactiveObjC (3.0.0)
   - SVProgressHUD (2.2.2)
   - YTKNetwork (2.0.4):
@@ -25,12 +34,20 @@ PODS:
 
 DEPENDENCIES:
   - Aspects (~> 1.4.1)
-  - AutoAlignButtonTools
+  - AutoAlignButtonTools (~> 0.3.0)
   - JLRoutes (~> 2.0.5)
   - Masonry (~> 1.0.2)
+  - React/Core (from `./react/node_modules/react-native`)
+  - React/RCTNetwork (from `./react/node_modules/react-native`)
+  - React/RCTText (from `./react/node_modules/react-native`)
+  - React/RCTWebSocket (from `./react/node_modules/react-native`)
   - ReactiveObjC (~> 3.0.0)
   - SVProgressHUD (~> 2.2.2)
   - YTKNetwork (~> 2.0.3)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ./react/node_modules/react-native
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -38,10 +55,11 @@ SPEC CHECKSUMS:
   AutoAlignButtonTools: 0fbd0b12a20972d2a84dfee6eab410dfb1c13caf
   JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  React: cd886dcf22742e640f65f7ae6b36a55dca864ab4
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 77446aad1f67a008a205ddeb98fe122c1499c81b
+PODFILE CHECKSUM: bd50a9a464b6fd9d78bc6f7af6f44c3680a9540f
 
 COCOAPODS: 1.4.0
