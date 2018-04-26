@@ -62,7 +62,7 @@
 }
 
 #pragma mark - FKBaseRequestFeformDelegate
-- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse {
+- (id)request:(OTLoginRequest *)request reformJSONResponse:(id)jsonResponse {
     if([request isKindOfClass:TestLoginRequest.class]){
         // 在这里对json数据进行重新格式化
         return @{

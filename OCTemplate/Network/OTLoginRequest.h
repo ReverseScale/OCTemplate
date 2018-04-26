@@ -7,6 +7,7 @@
 //
 
 #import <YTKNetwork/YTKNetwork.h>
+#import "OTBaseRequest.h"
 
 // 获取服务器响应状态码 key
 FOUNDATION_EXTERN NSString *const FK_BaseRequest_StatusCodeKey;
@@ -18,7 +19,7 @@ FOUNDATION_EXTERN NSString *const FK_BaseRequest_StatusMsgKey;
 FOUNDATION_EXTERN NSString *const FK_BaseRequest_DataKey;
 
 
-@class FKBaseRequest;
+@class OTLoginRequest;
 @protocol FKBaseRequestFeformDelegate <NSObject>
 
 /**
@@ -28,11 +29,11 @@ FOUNDATION_EXTERN NSString *const FK_BaseRequest_DataKey;
  @param jsonResponse 响应数据
  @return 自定reformat数据
  */
-- (id)request:(FKBaseRequest *)request reformJSONResponse:(id)jsonResponse;
+- (id)request:(OTLoginRequest *)request reformJSONResponse:(id)jsonResponse;
 
 @end
 
-@interface FKBaseRequest : YTKRequest
+@interface OTLoginRequest : OTBaseRequest
 
 /**
  数据重塑代理

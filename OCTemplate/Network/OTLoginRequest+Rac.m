@@ -6,10 +6,10 @@
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "FKBaseRequest+Rac.h"
+#import "OTLoginRequest+Rac.h"
 #import "NSObject+RACDescription.h"
 
-@implementation FKBaseRequest (Rac)
+@implementation OTLoginRequest (Rac)
 
 - (RACSignal *)rac_requestSignal
 {

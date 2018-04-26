@@ -6,9 +6,9 @@
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "FKBaseRequest.h"
+#import "OTLoginRequest.h"
 
-@interface FKBaseRequest (Rac)
+@interface OTLoginRequest (Rac)
 
 
 - (RACSignal *)rac_requestSignal;

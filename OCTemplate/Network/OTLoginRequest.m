@@ -6,7 +6,7 @@
 //  Copyright © 2017年 R.S. All rights reserved.
 //
 
-#import "FKBaseRequest.h"
+#import "OTLoginRequest.h"
 
 // 获取服务器响应状态码 key
 NSString *const FK_BaseRequest_StatusCodeKey = @"statusCode";
@@ -17,7 +17,7 @@ NSString *const FK_BaseRequest_StatusMsgKey = @"statusMsg";
 // 获取服务器响应数据 key
 NSString *const FK_BaseRequest_DataKey = @"data";;
 
-@implementation FKBaseRequest
+@implementation OTLoginRequest
 
 #pragma mark - Override
 - (YTKRequestMethod)requestMethod {

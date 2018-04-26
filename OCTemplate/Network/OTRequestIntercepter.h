@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FKBaseRequest.h"
+#import "OTLoginRequest.h"
 
-@interface FKBaseRequestIntercepter : NSObject
+@interface OTRequestIntercepter : NSObject
 
-- (void)hookRequestArgumentWithInstance:(FKBaseRequest *)request FKDeprecated("Do not use any more");
+- (void)hookRequestArgumentWithInstance:(OTLoginRequest *)request FKDeprecated("Do not use any more");
 
 @end

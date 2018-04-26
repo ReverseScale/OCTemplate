@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3422B4BD20917F9B0098F9D2 /* ReactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B4BC20917F9B0098F9D2 /* ReactViewController.m */; };
-		3422B4C120919B940098F9D2 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B4C020919B940098F9D2 /* TestModel.m */; };
+		3422B50E2091A7B30098F9D2 /* OTUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B50C2091A7B20098F9D2 /* OTUrlArgumentsFilter.m */; };
+		3422B5122091A9790098F9D2 /* OTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B5112091A9790098F9D2 /* OTBaseRequest.m */; };
+		3422B5152091A9A40098F9D2 /* TestDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B5142091A9A40098F9D2 /* TestDataRequest.m */; };
+		3422B5182091A9F80098F9D2 /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3422B5162091A9F70098F9D2 /* TestDataModel.m */; };
 		344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */; };
 		344F4F5F20907448007BCA66 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344F4F5D20907448007BCA66 /* OtherViewController.m */; };
 		3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3481FF4BBA600917F30 /* RouterConstant.m */; };
@@ -41,9 +44,9 @@
 		347765EC1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765EA1FF361890061A221 /* TestLoginAccountInputTableViewCell.xib */; };
 		347765F01FF363560061A221 /* TestLoginPwdInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765EE1FF363560061A221 /* TestLoginPwdInputTableViewCell.m */; };
 		347765F11FF363560061A221 /* TestLoginPwdInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347765EF1FF363560061A221 /* TestLoginPwdInputTableViewCell.xib */; };
-		347766011FF36BC80061A221 /* FKBaseRequest+Rac.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */; };
-		347766021FF36BC80061A221 /* FKBaseRequestIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */; };
-		347766051FF36C120061A221 /* FKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766031FF36C120061A221 /* FKBaseRequest.m */; };
+		347766011FF36BC80061A221 /* OTLoginRequest+Rac.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FE1FF36BC80061A221 /* OTLoginRequest+Rac.m */; };
+		347766021FF36BC80061A221 /* OTRequestIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 347765FF1FF36BC80061A221 /* OTRequestIntercepter.m */; };
+		347766051FF36C120061A221 /* OTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766031FF36C120061A221 /* OTLoginRequest.m */; };
 		347766081FF36D100061A221 /* FunctionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766061FF36D100061A221 /* FunctionDefine.m */; };
 		3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477660A1FF36E400061A221 /* TestLoginRequest.m */; };
 		5613310DB0A2B436048E79BF /* libPods-OCTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 661C26118B0E309E797101CB /* libPods-OCTemplate.a */; };
@@ -72,8 +75,14 @@
 		1A18036FC2C582E9ED1572A9 /* Pods-OCTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplateTests/Pods-OCTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3422B4BB20917F970098F9D2 /* ReactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactViewController.h; sourceTree = "<group>"; };
 		3422B4BC20917F9B0098F9D2 /* ReactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactViewController.m; sourceTree = "<group>"; };
-		3422B4BF20919B940098F9D2 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
-		3422B4C020919B940098F9D2 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		3422B50C2091A7B20098F9D2 /* OTUrlArgumentsFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTUrlArgumentsFilter.m; sourceTree = "<group>"; };
+		3422B50D2091A7B20098F9D2 /* OTUrlArgumentsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTUrlArgumentsFilter.h; sourceTree = "<group>"; };
+		3422B5102091A9780098F9D2 /* OTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTBaseRequest.h; sourceTree = "<group>"; };
+		3422B5112091A9790098F9D2 /* OTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTBaseRequest.m; sourceTree = "<group>"; };
+		3422B5132091A9A30098F9D2 /* TestDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataRequest.h; sourceTree = "<group>"; };
+		3422B5142091A9A40098F9D2 /* TestDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataRequest.m; sourceTree = "<group>"; };
+		3422B5162091A9F70098F9D2 /* TestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataModel.m; sourceTree = "<group>"; };
+		3422B5172091A9F80098F9D2 /* TestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
 		344F4F5920904E16007BCA66 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
 		344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
 		344F4F5C20907448007BCA66 /* OtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
@@ -141,12 +150,12 @@
 		347765ED1FF363560061A221 /* TestLoginPwdInputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginPwdInputTableViewCell.h; sourceTree = "<group>"; };
 		347765EE1FF363560061A221 /* TestLoginPwdInputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginPwdInputTableViewCell.m; sourceTree = "<group>"; };
 		347765EF1FF363560061A221 /* TestLoginPwdInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLoginPwdInputTableViewCell.xib; sourceTree = "<group>"; };
-		347765FB1FF36BC70061A221 /* FKBaseRequestIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBaseRequestIntercepter.h; sourceTree = "<group>"; };
-		347765FD1FF36BC80061A221 /* FKBaseRequest+Rac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FKBaseRequest+Rac.h"; sourceTree = "<group>"; };
-		347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FKBaseRequest+Rac.m"; sourceTree = "<group>"; };
-		347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBaseRequestIntercepter.m; sourceTree = "<group>"; };
-		347766031FF36C120061A221 /* FKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBaseRequest.m; sourceTree = "<group>"; };
-		347766041FF36C120061A221 /* FKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBaseRequest.h; sourceTree = "<group>"; };
+		347765FB1FF36BC70061A221 /* OTRequestIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRequestIntercepter.h; sourceTree = "<group>"; };
+		347765FD1FF36BC80061A221 /* OTLoginRequest+Rac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OTLoginRequest+Rac.h"; sourceTree = "<group>"; };
+		347765FE1FF36BC80061A221 /* OTLoginRequest+Rac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OTLoginRequest+Rac.m"; sourceTree = "<group>"; };
+		347765FF1FF36BC80061A221 /* OTRequestIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRequestIntercepter.m; sourceTree = "<group>"; };
+		347766031FF36C120061A221 /* OTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTLoginRequest.m; sourceTree = "<group>"; };
+		347766041FF36C120061A221 /* OTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTLoginRequest.h; sourceTree = "<group>"; };
 		347766061FF36D100061A221 /* FunctionDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionDefine.m; sourceTree = "<group>"; };
 		347766071FF36D100061A221 /* FunctionDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDefine.h; sourceTree = "<group>"; };
 		347766091FF36E400061A221 /* TestLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginRequest.h; sourceTree = "<group>"; };
@@ -205,8 +214,8 @@
 		3422B4BE20919B6D0098F9D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3422B4BF20919B940098F9D2 /* TestModel.h */,
-				3422B4C020919B940098F9D2 /* TestModel.m */,
+				3422B5172091A9F80098F9D2 /* TestDataModel.h */,
+				3422B5162091A9F70098F9D2 /* TestDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,12 +425,16 @@
 		347765F21FF368F70061A221 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				347766041FF36C120061A221 /* FKBaseRequest.h */,
-				347766031FF36C120061A221 /* FKBaseRequest.m */,
-				347765FD1FF36BC80061A221 /* FKBaseRequest+Rac.h */,
-				347765FE1FF36BC80061A221 /* FKBaseRequest+Rac.m */,
-				347765FB1FF36BC70061A221 /* FKBaseRequestIntercepter.h */,
-				347765FF1FF36BC80061A221 /* FKBaseRequestIntercepter.m */,
+				3422B5102091A9780098F9D2 /* OTBaseRequest.h */,
+				3422B5112091A9790098F9D2 /* OTBaseRequest.m */,
+				347766041FF36C120061A221 /* OTLoginRequest.h */,
+				347766031FF36C120061A221 /* OTLoginRequest.m */,
+				347765FD1FF36BC80061A221 /* OTLoginRequest+Rac.h */,
+				347765FE1FF36BC80061A221 /* OTLoginRequest+Rac.m */,
+				347765FB1FF36BC70061A221 /* OTRequestIntercepter.h */,
+				347765FF1FF36BC80061A221 /* OTRequestIntercepter.m */,
+				3422B50D2091A7B20098F9D2 /* OTUrlArgumentsFilter.h */,
+				3422B50C2091A7B20098F9D2 /* OTUrlArgumentsFilter.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -431,6 +444,8 @@
 			children = (
 				347766091FF36E400061A221 /* TestLoginRequest.h */,
 				3477660A1FF36E400061A221 /* TestLoginRequest.m */,
+				3422B5132091A9A30098F9D2 /* TestDataRequest.h */,
+				3422B5142091A9A40098F9D2 /* TestDataRequest.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -750,10 +765,12 @@
 				347765CB1FF344D10061A221 /* UIView+Extension.m in Sources */,
 				347765EB1FF361890061A221 /* TestLoginAccountInputTableViewCell.m in Sources */,
 				347765C31FF3427F0061A221 /* AOPViewModelIntercepter.m in Sources */,
+				3422B5122091A9790098F9D2 /* OTBaseRequest.m in Sources */,
+				3422B5152091A9A40098F9D2 /* TestDataRequest.m in Sources */,
 				347765F01FF363560061A221 /* TestLoginPwdInputTableViewCell.m in Sources */,
 				347766081FF36D100061A221 /* FunctionDefine.m in Sources */,
 				3422B4BD20917F9B0098F9D2 /* ReactViewController.m in Sources */,
-				347766051FF36C120061A221 /* FKBaseRequest.m in Sources */,
+				347766051FF36C120061A221 /* OTLoginRequest.m in Sources */,
 				347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */,
 				347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */,
 				3477657A1FF221FB0061A221 /* main.m in Sources */,
@@ -762,13 +779,14 @@
 				3450E3491FF4BBA600917F30 /* RouterConstant.m in Sources */,
 				347765B21FF32D1B0061A221 /* UIViewController+Extension.m in Sources */,
 				347765C61FF342AB0061A221 /* NSObject+Extension.m in Sources */,
-				3422B4C120919B940098F9D2 /* TestModel.m in Sources */,
+				3422B50E2091A7B30098F9D2 /* OTUrlArgumentsFilter.m in Sources */,
 				3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */,
 				347765E01FF34D2C0061A221 /* TestLoginViewModel.m in Sources */,
 				344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */,
+				3422B5182091A9F80098F9D2 /* TestDataModel.m in Sources */,
 				347765BB1FF33F6F0061A221 /* SVProgressHUD+Helper.m in Sources */,
-				347766021FF36BC80061A221 /* FKBaseRequestIntercepter.m in Sources */,
-				347766011FF36BC80061A221 /* FKBaseRequest+Rac.m in Sources */,
+				347766021FF36BC80061A221 /* OTRequestIntercepter.m in Sources */,
+				347766011FF36BC80061A221 /* OTLoginRequest+Rac.m in Sources */,
 				347765D91FF34BC40061A221 /* LoginViewController.m in Sources */,
 				347765CE1FF3453D0061A221 /* AOPViewIntercepter.m in Sources */,
 			);

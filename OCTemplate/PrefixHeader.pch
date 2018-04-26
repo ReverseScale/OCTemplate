@@ -31,7 +31,7 @@
     #import "AOPViewProtocol.h"
 
     // Request RAC
-    #import "FKBaseRequest+Rac.h"
+    #import "OTLoginRequest+Rac.h"
 
     // 自动布局框架
     #import "Masonry.h"

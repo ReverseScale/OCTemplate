@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate+Extension.h"
+#import "OTUrlArgumentsFilter.h"
 #import <WebKit/WebKit.h>
 #import <YTKNetwork.h>
 
@@ -49,8 +50,13 @@
     } else {
         config.debugLogEnabled = NO;
     }
-    config.baseUrl = @"http://www.baidu.com";
-    config.cdnUrl = @"http://www.baidu.com";
+
+    config.baseUrl = @"http://www.dcamp.com";
+    config.cdnUrl = @"http://fen.bi";
+    
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    OTUrlArgumentsFilter *urlFilter = [OTUrlArgumentsFilter filterWithArguments:@{@"version": appVersion}];
+    [config addUrlFilter:urlFilter]; 
 }
 @end
 
