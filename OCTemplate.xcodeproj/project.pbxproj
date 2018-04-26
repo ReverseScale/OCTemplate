@@ -235,18 +235,18 @@
 		347765691FF221FB0061A221 /* OCTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				347765A21FF222A50061A221 /* Macros */,
 				347765A71FF223D90061A221 /* PrefixHeader.pch */,
 				3477656A1FF221FB0061A221 /* AppDelegate.h */,
 				3477656B1FF221FB0061A221 /* AppDelegate.m */,
 				344F4F5920904E16007BCA66 /* AppDelegate+Extension.h */,
 				344F4F5A20904E16007BCA66 /* AppDelegate+Extension.m */,
 				3450E3461FF4BB4E00917F30 /* Router */,
-				347765F31FF369040061A221 /* Api */,
+				347765F31FF369040061A221 /* API */,
+				3477659C1FF222A50061A221 /* AOP */,
 				347765F21FF368F70061A221 /* Network */,
-				347765DB1FF34C560061A221 /* TestMVVM */,
+				347765DB1FF34C560061A221 /* MVC */,
 				347765B41FF33F6F0061A221 /* Utils */,
-				347765A21FF222A50061A221 /* Macros */,
-				3477659C1FF222A50061A221 /* AOPBase */,
 				347765701FF221FB0061A221 /* Main.storyboard */,
 				347765731FF221FB0061A221 /* Assets.xcassets */,
 				347765751FF221FB0061A221 /* LaunchScreen.storyboard */,
@@ -274,14 +274,14 @@
 			path = OCTemplateUITests;
 			sourceTree = "<group>";
 		};
-		3477659C1FF222A50061A221 /* AOPBase */ = {
+		3477659C1FF222A50061A221 /* AOP */ = {
 			isa = PBXGroup;
 			children = (
 				347765C71FF344610061A221 /* View */,
 				347765BF1FF3420A0061A221 /* Model */,
-				347765BE1FF341F10061A221 /* ViewController */,
+				347765BE1FF341F10061A221 /* Controller */,
 			);
-			path = AOPBase;
+			path = AOP;
 			sourceTree = "<group>";
 		};
 		347765A21FF222A50061A221 /* Macros */ = {
@@ -307,7 +307,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		347765BE1FF341F10061A221 /* ViewController */ = {
+		347765BE1FF341F10061A221 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				3477659F1FF222A50061A221 /* AOPViewControllerProtocol.h */,
@@ -316,7 +316,7 @@
 				347765B01FF32D1B0061A221 /* UIViewController+Extension.h */,
 				347765B11FF32D1B0061A221 /* UIViewController+Extension.m */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		347765BF1FF3420A0061A221 /* Model */ = {
@@ -345,14 +345,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		347765DB1FF34C560061A221 /* TestMVVM */ = {
+		347765DB1FF34C560061A221 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
 				347765DC1FF34C860061A221 /* Controller */,
 				347765E11FF34DB30061A221 /* View */,
-				347765DD1FF34D110061A221 /* ViewModel */,
+				347765DD1FF34D110061A221 /* Model */,
 			);
-			path = TestMVVM;
+			path = MVC;
 			sourceTree = "<group>";
 		};
 		347765DC1FF34C860061A221 /* Controller */ = {
@@ -374,13 +374,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		347765DD1FF34D110061A221 /* ViewModel */ = {
+		347765DD1FF34D110061A221 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				347765DE1FF34D2C0061A221 /* TestLoginViewModel.h */,
 				347765DF1FF34D2C0061A221 /* TestLoginViewModel.m */,
 			);
-			path = ViewModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		347765E11FF34DB30061A221 /* View */ = {
@@ -413,13 +413,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		347765F31FF369040061A221 /* Api */ = {
+		347765F31FF369040061A221 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				347766091FF36E400061A221 /* TestLoginRequest.h */,
 				3477660A1FF36E400061A221 /* TestLoginRequest.m */,
 			);
-			path = Api;
+			path = API;
 			sourceTree = "<group>";
 		};
 		CDE2185055A0BC5A317E7A04 /* Frameworks */ = {

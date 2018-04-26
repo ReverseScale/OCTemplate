@@ -21,6 +21,21 @@
     self.title = @"推出页";
     
     self.paramsLabel.text = [NSString stringWithFormat:@"参数 key:%@", self.params[@"key"]];
+    
+    [self setupRightBtn];
+}
+
+- (void)setupRightBtn {
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:@"React" style:UIBarButtonItemStylePlain target:self action:@selector(onClickedOKbtn)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+}
+
+- (void)onClickedOKbtn {
+    NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"ReactViewController"]];
+    
+    [[RACScheduler mainThreadScheduler] schedule:^{
+        [[UIApplication sharedApplication] openURL:JLRGenRouteURL(DefaultRouteSchema, routerDetail)];
+    }];
 }
 
 
