@@ -33,13 +33,11 @@
     view.dataTitleArray = @[@"深度调用", @"相互跳转", @"组件解耦",
                             @"多平台", @"热修复", @"埋点统计",
                             @"过程监控", @"", @"",
-                            @"", @"", @"",
                             @"|请求|", @"|翻页|",@"|缓存|",
                             ];
     view.dataImagesArray = @[@"icon_router_01", @"icon_router_02", @"icon_router_03",
                              @"icon_router_04", @"icon_router_05", @"icon_router_06",
                              @"icon_router_07", @"", @"",
-                             @"", @"", @"",
                              @"", @"", @"",
                              ];
     view.frame = CGRectMake(0, 100, self.view.bounds.size.width, 0);

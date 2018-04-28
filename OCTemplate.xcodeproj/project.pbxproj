@@ -953,7 +953,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OCTemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = OCTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -969,7 +969,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OCTemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = OCTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -985,7 +985,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = OCTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateTests;
@@ -1001,7 +1001,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = OCTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateTests;
@@ -1016,7 +1016,7 @@
 			baseConfigurationReference = D01B05CB752A50B9BADBE180 /* Pods-OCTemplateUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = OCTemplateUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateUITests;
@@ -1031,7 +1031,7 @@
 			baseConfigurationReference = EE0808F21B8F090FC67CE98C /* Pods-OCTemplateUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DHQ5WDNWKL;
+				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = OCTemplateUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S.OCTemplateUITests;
