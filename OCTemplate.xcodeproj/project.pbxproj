@@ -49,8 +49,8 @@
 		347766051FF36C120061A221 /* OTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766031FF36C120061A221 /* OTLoginRequest.m */; };
 		347766081FF36D100061A221 /* FunctionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 347766061FF36D100061A221 /* FunctionDefine.m */; };
 		3477660B1FF36E400061A221 /* TestLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477660A1FF36E400061A221 /* TestLoginRequest.m */; };
-		34DADEE7209AB16B00AF6246 /* RNCalliOSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DADEE6209AB16B00AF6246 /* RNCalliOSAction.m */; };
-		34DADEEA209AB1E700AF6246 /* RCSubEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DADEE9209AB1E700AF6246 /* RCSubEventEmitter.m */; };
+		34DADEFA209B04BF00AF6246 /* RNCalliOSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DADEF6209B04BF00AF6246 /* RNCalliOSAction.m */; };
+		34DADEFB209B04BF00AF6246 /* RCSubEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DADEF9209B04BF00AF6246 /* RCSubEventEmitter.m */; };
 		5613310DB0A2B436048E79BF /* libPods-OCTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 661C26118B0E309E797101CB /* libPods-OCTemplate.a */; };
 		7CB328F8239381AA657EF92D /* libPods-OCTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1008AEDB8AF55DF02EF0EDA /* libPods-OCTemplateTests.a */; };
 		AAF2AFCF57D775B0D9AAD11D /* libPods-OCTemplateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D9C45B4EF9DA7FD1724788 /* libPods-OCTemplateUITests.a */; };
@@ -162,10 +162,10 @@
 		347766071FF36D100061A221 /* FunctionDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDefine.h; sourceTree = "<group>"; };
 		347766091FF36E400061A221 /* TestLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginRequest.h; sourceTree = "<group>"; };
 		3477660A1FF36E400061A221 /* TestLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginRequest.m; sourceTree = "<group>"; };
-		34DADEE5209AB16B00AF6246 /* RNCalliOSAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCalliOSAction.h; sourceTree = "<group>"; };
-		34DADEE6209AB16B00AF6246 /* RNCalliOSAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCalliOSAction.m; sourceTree = "<group>"; };
-		34DADEE8209AB1E700AF6246 /* RCSubEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCSubEventEmitter.h; sourceTree = "<group>"; };
-		34DADEE9209AB1E700AF6246 /* RCSubEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCSubEventEmitter.m; sourceTree = "<group>"; };
+		34DADEF6209B04BF00AF6246 /* RNCalliOSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCalliOSAction.m; sourceTree = "<group>"; };
+		34DADEF7209B04BF00AF6246 /* RCSubEventEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSubEventEmitter.h; sourceTree = "<group>"; };
+		34DADEF8209B04BF00AF6246 /* RNCalliOSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCalliOSAction.h; sourceTree = "<group>"; };
+		34DADEF9209B04BF00AF6246 /* RCSubEventEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSubEventEmitter.m; sourceTree = "<group>"; };
 		55D9C45B4EF9DA7FD1724788 /* libPods-OCTemplateUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTemplateUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65113D233E1AB71C524A586B /* Pods-OCTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCTemplate/Pods-OCTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		661C26118B0E309E797101CB /* libPods-OCTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,7 +274,7 @@
 				347765F21FF368F70061A221 /* Network */,
 				347765DB1FF34C560061A221 /* MVVMC */,
 				347765B41FF33F6F0061A221 /* Utils */,
-				34DADEE4209AB14400AF6246 /* React */,
+				34DADEF5209B04BF00AF6246 /* ReactBridge */,
 				347765701FF221FB0061A221 /* Main.storyboard */,
 				347765731FF221FB0061A221 /* Assets.xcassets */,
 				347765751FF221FB0061A221 /* LaunchScreen.storyboard */,
@@ -457,15 +457,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		34DADEE4209AB14400AF6246 /* React */ = {
+		34DADEF5209B04BF00AF6246 /* ReactBridge */ = {
 			isa = PBXGroup;
 			children = (
-				34DADEE5209AB16B00AF6246 /* RNCalliOSAction.h */,
-				34DADEE6209AB16B00AF6246 /* RNCalliOSAction.m */,
-				34DADEE8209AB1E700AF6246 /* RCSubEventEmitter.h */,
-				34DADEE9209AB1E700AF6246 /* RCSubEventEmitter.m */,
+				34DADEF6209B04BF00AF6246 /* RNCalliOSAction.m */,
+				34DADEF7209B04BF00AF6246 /* RCSubEventEmitter.h */,
+				34DADEF8209B04BF00AF6246 /* RNCalliOSAction.h */,
+				34DADEF9209B04BF00AF6246 /* RCSubEventEmitter.m */,
 			);
-			path = React;
+			path = ReactBridge;
 			sourceTree = "<group>";
 		};
 		CDE2185055A0BC5A317E7A04 /* Frameworks */ = {
@@ -791,8 +791,8 @@
 				347766051FF36C120061A221 /* OTLoginRequest.m in Sources */,
 				347765BC1FF33F6F0061A221 /* UIColor+FKColor.m in Sources */,
 				347765A41FF222A50061A221 /* AOPViewControllerIntercepter.m in Sources */,
-				34DADEEA209AB1E700AF6246 /* RCSubEventEmitter.m in Sources */,
-				34DADEE7209AB16B00AF6246 /* RNCalliOSAction.m in Sources */,
+				34DADEFB209B04BF00AF6246 /* RCSubEventEmitter.m in Sources */,
+				34DADEFA209B04BF00AF6246 /* RNCalliOSAction.m in Sources */,
 				3477657A1FF221FB0061A221 /* main.m in Sources */,
 				3450E3541FF4D9F400917F30 /* PushViewController.m in Sources */,
 				347765E41FF34DD00061A221 /* TestLoginInputFooterView.m in Sources */,
