@@ -32,12 +32,23 @@
     jsCodeLocation = [NSURL URLWithString:@"http://10.0.0.65:8081/index.ios.bundle?platform=ios&dev=true"];
 
     
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+    RCTRootView *reactRootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                         moduleName:@"OCTemplate"
                                                  initialProperties:nil
                                                      launchOptions:nil];
-    rootView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [self.view addSubview:rootView];
+    reactRootView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [self.view addSubview:reactRootView];
+    
+    UIButton *callReactBtn = [UIButton new];
+    callReactBtn.frame = CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 45);
+    [callReactBtn setTitle:@"调用 React" forState:UIControlStateNormal];
+    [callReactBtn setBackgroundColor:[UIColor redColor]];
+    [callReactBtn addTarget:self action:@selector(clickBtnCallReact) forControlEvents:UIControlEventTouchUpInside];
+    [reactRootView addSubview:callReactBtn];
+}
+
+- (void)clickBtnCallReact {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"sendName" object:nil userInfo:@{@"name":@"li"}];
 }
 
 - (void)dealloc {

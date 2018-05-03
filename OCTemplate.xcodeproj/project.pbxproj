@@ -460,9 +460,9 @@
 		34DADEF5209B04BF00AF6246 /* ReactBridge */ = {
 			isa = PBXGroup;
 			children = (
+				34DADEF8209B04BF00AF6246 /* RNCalliOSAction.h */,
 				34DADEF6209B04BF00AF6246 /* RNCalliOSAction.m */,
 				34DADEF7209B04BF00AF6246 /* RCSubEventEmitter.h */,
-				34DADEF8209B04BF00AF6246 /* RNCalliOSAction.h */,
 				34DADEF9209B04BF00AF6246 /* RCSubEventEmitter.m */,
 			);
 			path = ReactBridge;

@@ -12,7 +12,7 @@ import React, { Component } from 'react';
  } from 'react-native';
 
 var RNCalliOSAction = NativeModules.RNCalliOSAction;
-
+var NativeModule = new NativeEventEmitter(RNCalliOSAction)
 class Main extends Component {
 
   constructor(props){
@@ -24,19 +24,15 @@ class Main extends Component {
         selectDate:'',
     }
   }
-
-  componentWillMount() {
-    var RNCalliOSAction = NativeModules.RNCalliOSAction;
-    var emitter = new NativeEventEmitter(RNCalliOSAction)
-    // this.subScription = emitter.addListener("sendName",(body) => this._getNotice(body))
-  }
-
+  
   componentDidMount (){
     this.listener = NativeAppEventEmitter.addListener('getSelectDate',(data)=>{
         this.setState({
             selectDate:data.SelectDate,
         })
     })
+    // NativeModule.addListener("sendName",(body) => this._getNotice(body))
+    this.listener = NativeAppEventEmitter.addListener("sendName",(body) => this._getNotice(body))
   }
 
   _getNotice (body) {
@@ -48,7 +44,6 @@ class Main extends Component {
   componentWillUnmount(){
     this.listener && this.listener.remove();
     this.listener = null;
-    this.subScription.remove()
 }
 
   //Promises 回调  异步执行方法
@@ -89,7 +84,7 @@ class Main extends Component {
         <TouchableOpacity style={styles.calltonative}
                           onPress={()=>{
               RNCalliOSAction.calliOSActionWithDictionParams({
-                  params1:'RN',
+                  params1:'React',
                   params2:'call',
                   params3:'iOS'
               });
@@ -100,7 +95,7 @@ class Main extends Component {
         <TouchableOpacity style={styles.calltonative}
                           onPress={()=>{
               RNCalliOSAction.calliOSActionWithArrayParams([
-                  'RN',
+                  'React',
                   'call',
                   'iOS'
               ]);
@@ -164,9 +159,9 @@ class Main extends Component {
      backgroundColor: '#87e6e3',
    },
    welcome: {
-     fontSize: 20,
+     fontSize: 22,
      color: "#FFFFFF",
-     height:45,
+     height:50,
    },
    calltonative: {
      height:30,
