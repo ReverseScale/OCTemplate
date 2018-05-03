@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import {
+ import {
    Text,
    View,
    Image,
    AppRegistry,
    StyleSheet,
    TouchableOpacity,
+   NativeAppEventEmitter, 
    NativeModules,
-   NativeAppEventEmitter,
    NativeEventEmitter,
-} from 'react-native';
+ } from 'react-native';
 
 var RNCalliOSAction = NativeModules.RNCalliOSAction;
-const NativeModule = new NativeEventEmitter(RNCalliOSAction);
 
 class Main extends Component {
 
@@ -26,22 +25,31 @@ class Main extends Component {
     }
   }
 
+  componentWillMount() {
+    var RNCalliOSAction = NativeModules.RNCalliOSAction;
+    var emitter = new NativeEventEmitter(RNCalliOSAction)
+    // this.subScription = emitter.addListener("sendName",(body) => this._getNotice(body))
+  }
+
   componentDidMount (){
     this.listener = NativeAppEventEmitter.addListener('getSelectDate',(data)=>{
         this.setState({
             selectDate:data.SelectDate,
         })
     })
-    NativeAppEventEmitter.addListener('Callback',(data)=>this._getNotice(data));
   }
 
   _getNotice (body) {
-    this.forceUpdate();
-  }
+    this.setState({
+        notice:body.name+','+body.age
+    })
+  } 
 
   componentWillUnmount(){
-    this.listener.remove();
-  }
+    this.listener && this.listener.remove();
+    this.listener = null;
+    this.subScription.remove()
+}
 
   //Promises 回调  异步执行方法
   async PromisesCallBack(){
@@ -137,18 +145,11 @@ class Main extends Component {
         <TouchableOpacity style={styles.calltonativecallback}
                             onPress={()=>{
                                 RNCalliOSAction.RNCalliOSToShowDatePicker();
-          }}>
-            <Text>点击调用 Native 方法, 弹出时间选取器</Text>
-            <Text>选取的时间：{this.state.selectDate}</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.calltonativecallback}
-                            onPress={()=>{
-                                RNCalliOSAction.RNCalliOSToConstantsToExport();
-        }}>
-        <Text>点击调用 Native 方法, SubEventEmitter</Text>
-        </TouchableOpacity>
-
+            }}>
+              <Text>点击调用 Native 方法, 弹出时间选取器</Text>
+              <Text>选取的时间：{this.state.selectDate}</Text>
+          </TouchableOpacity>
+        
       </View>
     );
   }

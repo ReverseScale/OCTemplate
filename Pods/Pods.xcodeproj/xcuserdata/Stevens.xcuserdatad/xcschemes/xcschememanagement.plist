@@ -86,6 +86,13 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>Yoga.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
 	</dict>

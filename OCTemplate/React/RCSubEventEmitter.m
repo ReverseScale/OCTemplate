@@ -11,11 +11,11 @@
 @implementation RCSubEventEmitter
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[@"Callback"];
+    return @[@"sendName"];
 }
 
 - (void)Callback:(NSString*)code result:(NSString*) result {
-    [self sendEventWithName:@"Callback"
+    [self sendEventWithName:@"sendName"
                        body:@{
                               @"code": code,
                               @"result": result,
