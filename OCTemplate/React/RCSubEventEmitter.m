@@ -10,4 +10,15 @@
 
 @implementation RCSubEventEmitter
 
+- (NSArray<NSString *> *)supportedEvents {
+    return @[@"Callback"];
+}
+
+- (void)Callback:(NSString*)code result:(NSString*) result {
+    [self sendEventWithName:@"Callback"
+                       body:@{
+                              @"code": code,
+                              @"result": result,
+                              }];
+}
 @end

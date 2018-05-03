@@ -6,8 +6,8 @@
 //  Copyright © 2018年 R.S. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <React/RCTEventEmitter.h>
 
-@interface RCSubEventEmitter : NSObject
-
+@interface RCSubEventEmitter : RCTEventEmitter<RCTBridgeModule>
+- (void)Callback:(NSString*)code result:(NSString*) result;
 @end
