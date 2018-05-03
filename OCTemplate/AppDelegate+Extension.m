@@ -118,6 +118,7 @@
         if (isPresent) {
             [currentVC.navigationController presentViewController:toVC animated:YES completion:nil];
         } else {
+            toVC.hidesBottomBarWhenPushed = YES;
             [currentVC.navigationController pushViewController:toVC animated:YES];
         }
     }
@@ -125,22 +126,23 @@
 
 /// 获取当前控制器
 - (UIViewController *)_currentViewController {
-    UIViewController * currVC = nil;
-    UIViewController * Rootvc = self.window.rootViewController ;
+    UIViewController * currentVC = nil;
+    UIViewController * rootVC = self.window.rootViewController ;
     do {
-        if ([Rootvc isKindOfClass:[UINavigationController class]]) {
-            UINavigationController * nav = (UINavigationController *)Rootvc;
-            UIViewController * v = [nav.viewControllers lastObject];
-            currVC = v;
-            Rootvc = v.presentedViewController;
+        if ([rootVC isKindOfClass:[UINavigationController class]]) {
+            UINavigationController * nav = (UINavigationController *)rootVC;
+            UIViewController * vc = [nav.viewControllers lastObject];
+            currentVC = vc;
+            rootVC = vc.presentedViewController;
             continue;
-        } else if ([Rootvc isKindOfClass:[UITabBarController class]]){
-            UITabBarController * tabVC = (UITabBarController *)Rootvc;
-            currVC = tabVC;
-            Rootvc = [tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
+        } else if ([rootVC isKindOfClass:[UITabBarController class]]){
+            UITabBarController * tabVC = (UITabBarController *)rootVC;
+            currentVC = tabVC;
+            rootVC = [tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
             continue;
         }
-    } while (Rootvc != nil);
-    return currVC;
+    } while (rootVC != nil);
+
+    return currentVC;
 }
 @end

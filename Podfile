@@ -35,6 +35,7 @@ target 'OCTemplate' do
   'Core',
   'RCTText',
   'RCTNetwork',
+  'RCTAnimation',
   'RCTWebSocket', # 这个模块是用于调试功能的
   # 在这里继续添加你所需要的模块
   ]

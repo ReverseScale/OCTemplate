@@ -25,9 +25,8 @@
     [super viewDidLoad];
     
     self.title = @"示例";
-
-    // Do any additional setup after loading the view, typically from a nib.
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -109,7 +108,6 @@
 - (void)rs_createViewForConctroller {
     [self.view addSubview:self.logoutBtn];
     [self.view addSubview:self.pushBtn];
-    
     [self.view setNeedsUpdateConstraints];
 }
 /// 初始化数据

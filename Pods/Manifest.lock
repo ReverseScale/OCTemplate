@@ -21,6 +21,8 @@ PODS:
   - React/Core (0.39.2):
     - React/CSSLayout
   - React/CSSLayout (0.39.2)
+  - React/RCTAnimation (0.39.2):
+    - React/Core
   - React/RCTNetwork (0.39.2):
     - React/Core
   - React/RCTText (0.39.2):
@@ -38,6 +40,7 @@ DEPENDENCIES:
   - JLRoutes (~> 2.0.5)
   - Masonry (~> 1.0.2)
   - React/Core (from `./react/node_modules/react-native`)
+  - React/RCTAnimation (from `./react/node_modules/react-native`)
   - React/RCTNetwork (from `./react/node_modules/react-native`)
   - React/RCTText (from `./react/node_modules/react-native`)
   - React/RCTWebSocket (from `./react/node_modules/react-native`)
@@ -60,6 +63,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: bd50a9a464b6fd9d78bc6f7af6f44c3680a9540f
+PODFILE CHECKSUM: 01e0c8ee0398d1c08b55632ee808d012e3c71d37
 
 COCOAPODS: 1.4.0
