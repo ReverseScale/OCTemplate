@@ -102,7 +102,7 @@
 
 #pragma mark - Action: root to main app
 - (void)routerAppAction {
-    NSString *url = @"/authorize.com?callback=secondayapp://success.authorize.com&client_id=1234&name=淘煲&home=上海市";
+    NSString *url = @"/authorize.com?callback=OCTemplate://com_R_S_navPush/CallBackViewController&client_id=1234&name=淘煲&home=上海市";
 
     [[RACScheduler mainThreadScheduler] schedule:^{
         [[UIApplication sharedApplication] openURL:JLRGenRouteURL(ComponentsCallRouteSchema, url)];

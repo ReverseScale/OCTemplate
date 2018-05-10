@@ -18,6 +18,8 @@
 		3450E34F1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E34D1FF4BD8D00917F30 /* JLRoutes+GenerateURL.m */; };
 		3450E3541FF4D9F400917F30 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450E3521FF4D9F400917F30 /* PushViewController.m */; };
 		3450E3551FF4D9F400917F30 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3450E3531FF4D9F400917F30 /* PushViewController.xib */; };
+		3452265B20A44DBA003C23BD /* CallBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3452265920A44DBA003C23BD /* CallBackViewController.m */; };
+		3452265C20A44DBA003C23BD /* CallBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3452265A20A44DBA003C23BD /* CallBackViewController.xib */; };
 		3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656B1FF221FB0061A221 /* AppDelegate.m */; };
 		3477656F1FF221FB0061A221 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3477656E1FF221FB0061A221 /* ExampleViewController.m */; };
 		347765721FF221FB0061A221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347765701FF221FB0061A221 /* Main.storyboard */; };
@@ -97,6 +99,9 @@
 		3450E3511FF4D9F400917F30 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		3450E3521FF4D9F400917F30 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		3450E3531FF4D9F400917F30 /* PushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
+		3452265820A44DBA003C23BD /* CallBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallBackViewController.h; sourceTree = "<group>"; };
+		3452265920A44DBA003C23BD /* CallBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallBackViewController.m; sourceTree = "<group>"; };
+		3452265A20A44DBA003C23BD /* CallBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallBackViewController.xib; sourceTree = "<group>"; };
 		347765671FF221FB0061A221 /* OCTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3477656A1FF221FB0061A221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3477656B1FF221FB0061A221 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -402,6 +407,9 @@
 				3450E3531FF4D9F400917F30 /* PushViewController.xib */,
 				3422B4BB20917F970098F9D2 /* ReactViewController.h */,
 				3422B4BC20917F9B0098F9D2 /* ReactViewController.m */,
+				3452265820A44DBA003C23BD /* CallBackViewController.h */,
+				3452265920A44DBA003C23BD /* CallBackViewController.m */,
+				3452265A20A44DBA003C23BD /* CallBackViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,6 +612,7 @@
 				34DADF1A209BFBC400AF6246 /* LaunchScreen.storyboard in Resources */,
 				3450E3551FF4D9F400917F30 /* PushViewController.xib in Resources */,
 				347765721FF221FB0061A221 /* Main.storyboard in Resources */,
+				3452265C20A44DBA003C23BD /* CallBackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +813,7 @@
 				347765B21FF32D1B0061A221 /* UIViewController+Extension.m in Sources */,
 				347765C61FF342AB0061A221 /* NSObject+Extension.m in Sources */,
 				3422B50E2091A7B30098F9D2 /* OTUrlArgumentsFilter.m in Sources */,
+				3452265B20A44DBA003C23BD /* CallBackViewController.m in Sources */,
 				3477656C1FF221FB0061A221 /* AppDelegate.m in Sources */,
 				347765E01FF34D2C0061A221 /* TestLoginViewModel.m in Sources */,
 				344F4F5B20904E16007BCA66 /* AppDelegate+Extension.m in Sources */,
