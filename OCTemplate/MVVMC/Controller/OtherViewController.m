@@ -67,13 +67,40 @@
     }
 }
 
-#pragma mark - Action
 - (void)btnDelegateAction:(UIButton *)button {
-    NSLog(@"%@", [NSString stringWithFormat:@"你点击了<%@>",button.titleLabel.text]);
+    NSString *clickStringKey = button.titleLabel.text;
+
+    NSLog(@"click key:%@", clickStringKey);
     
-    [self handleTestWithAction:button];
+    if ([clickStringKey isEqualToString:@"深度调用"]) {
+        [self depthCallAction];
+    } else if ([clickStringKey isEqualToString:@"相互跳转"]) {
+        
+    } else if ([clickStringKey isEqualToString:@"组件解耦"]) {
+        
+    } else if ([clickStringKey isEqualToString:@"多平台"]) {
+        
+    } else if ([clickStringKey isEqualToString:@"热修复"]) {
+        
+    } else if ([clickStringKey isEqualToString:@"埋点统计"]) {
+        
+    } else if ([clickStringKey isEqualToString:@"过程监控"]) {
+        
+    } else {
+        [self handleTestWithAction:button];
+    }
 }
 
+#pragma mark - push to react Action
+- (void)depthCallAction {
+    NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"ReactViewController"]];
+    
+    [[RACScheduler mainThreadScheduler] schedule:^{
+        [[UIApplication sharedApplication] openURL:JLRGenRouteURL(DefaultRouteSchema, routerDetail)];
+    }];
+}
+
+#pragma mark - Network Action
 - (void)handleTestWithAction:(UIButton *)button {
     if ([button.titleLabel.text isEqualToString:@"|请求|"]) {
         [_testDataRequest resetPage];

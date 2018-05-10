@@ -31,7 +31,6 @@
 //    jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
     jsCodeLocation = [NSURL URLWithString:@"http://10.0.0.65:8081/index.ios.bundle?platform=ios&dev=true"];
 
-    
     RCTRootView *reactRootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                         moduleName:@"OCTemplate"
                                                  initialProperties:nil
