@@ -75,7 +75,7 @@
     if ([clickStringKey isEqualToString:@"深度调用"]) {
         [self depthCallAction];
     } else if ([clickStringKey isEqualToString:@"相互跳转"]) {
-        
+        [self routerAppAction];
     } else if ([clickStringKey isEqualToString:@"组件解耦"]) {
         
     } else if ([clickStringKey isEqualToString:@"多平台"]) {
@@ -91,7 +91,7 @@
     }
 }
 
-#pragma mark - push to react Action
+#pragma mark - Action: push to react
 - (void)depthCallAction {
     NSString *routerDetail = [JLRoutes rs_generateURLWithPattern:NavPushRoute parameters:@[@"ReactViewController"]];
     
@@ -100,7 +100,16 @@
     }];
 }
 
-#pragma mark - Network Action
+#pragma mark - Action: root to main app
+- (void)routerAppAction {
+    NSString *url = @"/authorize.com?callback=secondayapp://success.authorize.com&client_id=1234&name=淘煲&home=上海市";
+
+    [[RACScheduler mainThreadScheduler] schedule:^{
+        [[UIApplication sharedApplication] openURL:JLRGenRouteURL(ComponentsCallRouteSchema, url)];
+    }];
+}
+
+#pragma mark - Action: Network test demo
 - (void)handleTestWithAction:(UIButton *)button {
     if ([button.titleLabel.text isEqualToString:@"|请求|"]) {
         [_testDataRequest resetPage];

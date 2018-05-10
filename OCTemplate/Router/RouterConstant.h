@@ -27,6 +27,9 @@ FOUNDATION_EXTERN NSString *const HTTPsRouteSchema;
 // WEB交互路由跳转模式
 FOUNDATION_EXTERN NSString *const WebHandlerRouteSchema;
 
+// 发起通信
+FOUNDATION_EXTERN NSString *const ComponentsCallRouteSchema;
+
 // 回调通信
 FOUNDATION_EXTERN NSString *const ComponentsCallBackHandlerRouteSchema;
 

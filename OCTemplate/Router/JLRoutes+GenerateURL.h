@@ -17,7 +17,7 @@ path])
 #undef JLRGenRouteURL
 #define JLRGenRouteURL(Schema, path) \
 ([NSURL URLWithString: \
-JLRGenRoute(Schema, path)])
+[JLRGenRoute(Schema, path) stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]])
 
 
 @interface JLRoutes (GenerateURL)

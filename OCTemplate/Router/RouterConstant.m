@@ -16,6 +16,8 @@ NSString *const HTTPRouteSchema = @"http";
 NSString *const HTTPsRouteSchema = @"https";
 
 NSString *const ComponentsCallBackHandlerRouteSchema = @"AppCallBack";
+NSString *const ComponentsCallRouteSchema = @"mainapp";
+
 NSString *const WebHandlerRouteSchema = @"Custom";
 NSString *const UnknownHandlerRouteSchema = @"UnKnown";
 
