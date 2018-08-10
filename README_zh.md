@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
-[EN](https://github.com/ReverseScale/SkeletonView/blob/master/README_zh.md) | [中文](#中文说明)
+[EN](https://github.com/ReverseScale/OCTemplate) | [中文](#中文说明)
 
 基于 Objective-C 实现的框架设计，YTKNetwork网络层 + AOP替代基类 + MVVM + ReactiveObjC + JLRoutes组件化 🤖
 
