@@ -11,4 +11,9 @@ NSString *const UIView_DataSourceArrayIndexKey = @"UIView_DataSourceArrayIndexKe
 
 @implementation UIView (Extension)
 
+-(instancetype)initWithFrame_rs:(CGRect)frame
+{
+    return [self initWithFrame:frame];
+}
+
 @end
