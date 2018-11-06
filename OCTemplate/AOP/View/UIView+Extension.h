@@ -12,5 +12,5 @@
 FOUNDATION_EXTERN NSString *const UIView_DataSourceArrayIndexKey;
 
 @interface UIView (Extension)
-
+- (instancetype)initWithFrame_rs:(CGRect)frame;
 @end

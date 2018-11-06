@@ -30,10 +30,14 @@
         /* 方法拦截 */
         
         // 代码方式唤起view
-        [UIView aspect_hookSelector:@selector(initWithFrame:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, CGRect frame){
+        [UIView aspect_hookSelector:@selector(initWithFrame_rs:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, CGRect frame){
             
             [self _init:aspectInfo.instance withFrame:frame];
         }  error:nil];
+        
+        [UIView aspect_hookSelector:@selector(init) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo){
+            [self _init:aspectInfo.instance withFrame:CGRectZero];
+        } error:nil];
         
         // xib方式唤起view
         [UIView aspect_hookSelector:@selector(initWithCoder:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, NSCoder *aDecoder){

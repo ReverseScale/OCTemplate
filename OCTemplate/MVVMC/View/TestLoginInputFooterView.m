@@ -36,7 +36,7 @@
 #pragma mark - Getter
 - (TestLoginButton *)loginBtn {
     if (!_loginBtn) {
-        _loginBtn = [[TestLoginButton alloc] initWithFrame:CGRectZero];
+        _loginBtn = [[TestLoginButton alloc] initWithFrame_rs:CGRectZero];
         _loginBtn.enabled = NO;
     }
     return _loginBtn;
