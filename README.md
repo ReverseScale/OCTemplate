@@ -617,5 +617,3 @@ SOFTWARE.
 * WeChat : WhatsXie
 * Email : ReverseScale@iCloud.com
 * Blog : https://reversescale.github.io
-* Code : https://github.com/ReverseScale/OCTemplate
-
