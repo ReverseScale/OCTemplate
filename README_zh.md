@@ -8,9 +8,7 @@
 
 > 我理解的框架，就好比计算机的主板，房屋的建筑骨架，道路的基础设施配套，框架搭的好，能直接影响开发者的开发心情，更能让项目健壮性和扩展性大大增强。
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41712771.jpg)
-
-![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/download-6.8MB-yellow.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f69358239a6e?w=820&h=480&f=jpeg&s=46204)
 
 ----
 ### 🤖 要求
@@ -76,7 +74,7 @@ use_frameworks!
 Casa反革命工程师 iOS应用架构谈 view层的组织和调用方案 博客中提到一个疑问
 是否有必要让业务方统一派生ViewController
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/12128058.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935ce5f838?w=198&h=166&f=png&s=36645)
 
 Casa大神回答是NO，原因如下
 1. 使用派生比不使用派生更容易增加业务方的使用成本
@@ -160,7 +158,7 @@ MVVM是基于胖Model的架构思路建立的，然后在胖Model中拆出两部
 
 我们知道，苹果MVC并没有专门为网络层代码分专门的层级，按照以往习惯，大家都写在了Controller 中，这也是Controller 变Massive得元凶之一，现在我们可以将网络请求等诸如此类的代码放到ViewModel中了 （文章后半部分将会描述ViewModel中的网络请求）
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/75363007.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935e05933d?w=215&h=172&f=png&s=34900)
 
 *-数据流向-*
 
@@ -206,7 +204,7 @@ YTKNetwork 是猿题库 iOS 研发团队基于 AFNetworking 封装的 iOS 网络
 
 *以什么方式将数据交付给业务层？*
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/32067775.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f69385b2261c?w=181&h=131&f=png&s=34097)
 
 虽然 iOS应用架构谈 网络层设计方案 中 Casa大神写到 尽量不要用block，应该使用代理
 的确，Block难以追踪和定位错误，容易内存泄漏， YTKNetwork 也提供代理方式回调
@@ -436,6 +434,9 @@ NSString *token = DecodeStringFromDic(jsonResponse, FKLoginAccessTokenKey)
 答：纯字典，去Model
 
 #### 4.采用 JLRoutes 路由 对应用进行组件化解耦
+
+![](https://user-gold-cdn.xitu.io/2018/4/25/162fc3254daa470b?w=468&h=368&f=png&s=37364)
+
 iOS应用架构谈 组件化方案 一文中 Casa 针对 蘑菇街组件化 提出了质疑，质疑点主要在这几方面
 1. App启动时组件需要注册URL
 2. URL调用组件方式不太好传递类似 UIImage 等非常规对象
