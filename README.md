@@ -8,7 +8,7 @@ Framework Design Based on Objective-C Implementation, YTKNetwork Network + AOP S
 
 > I understand the framework, like the computer's motherboard, building the framework of the building, the infrastructure of the road infrastructure, the framework take a good, can directly affect the developer's development mood, but also make the project robustness and scalability greatly enhanced.
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/41712771.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f69358239a6e?w=820&h=480&f=jpeg&s=46204)
 
 ----
 ### 🤖 Requirements
@@ -73,7 +73,7 @@ Adopt AOP ideas, use Aspects to complete the replacement Controller, View, ViewM
 Casa Counterrevolutionary Engineer iOS Application Architecture Talking about layering and calling scenarios in the blog
 Is it necessary to have the business side derive ViewController
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/12128058.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935ce5f838?w=198&h=166&f=png&s=36645)
 
 Casa God reply is NO, the reason is as follows
 1. Using Derivatives Instead of using Derivatives it is easier to increase the cost of using the business side
@@ -157,7 +157,7 @@ Fat Model is actually to reduce the burden of Controller exists, and the MVVM is
 
 We know that Apple MVC is not dedicated to the network layer code sub-level, in accordance with past habits, we are all written in the Controller, which is one of the culprit Controller Variable Massive, and now we can put such requests for network requests and so on Into ViewModel (the second half of the article will describe network requests in ViewModel).
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/75363007.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f6935e05933d?w=215&h=172&f=png&s=34900)
 
 * - Data Flow - *
 
@@ -203,7 +203,7 @@ For the first question
 
 * In what way will data be delivered to the business layer? *
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-1-9/32067775.jpg)
+![](https://user-gold-cdn.xitu.io/2018/2/7/1616f69385b2261c?w=181&h=131&f=png&s=34097)
 
 Although the iOS application architecture talks about the design of the network layer, Casa da Shen wrote that try not to use block, you should use proxy
 Indeed, Block is difficult to track and locate errors, easy memory leaks, YTKNetwork also provides proxy mode callback.
@@ -445,6 +445,9 @@ A: delegate the best block for the times
 A: pure dictionary, to Model
 
 #### 4. Using JLRoutes Routing Component Decoupling of Applications
+
+![](https://user-gold-cdn.xitu.io/2018/4/25/162fc3254daa470b?w=468&h=368&f=png&s=37364)
+
 IOS application architecture talk about the component of the program in which a copy of the Casa for Mackay Street questioned the main points in these areas:
 1. App start component registration URL
 2. URL calling component is not very good to pass non-conventional objects such as UIImage
