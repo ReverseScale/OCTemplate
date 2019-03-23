@@ -4,7 +4,7 @@
 
 [EN](https://github.com/ReverseScale/OCTemplate) | [中文](https://github.com/ReverseScale/OCTemplate/blob/master/README_zh.md)
 
-基于 Objective-C 实现的框架设计，YTKNetwork网络层 + AOP替代基类 + MVVM + ReactiveObjC + JLRoutes组件化 🤖
+基于 Objective-C 实现的框架设计，YTKNetwork网络层 + AOP替代基类 + MVVMC + ReactNative + ReactiveObjC + JLRoutes组件化 🤖
 
 > 我理解的框架，就好比计算机的主板，房屋的建筑骨架，道路的基础设施配套，框架搭的好，能直接影响开发者的开发心情，更能让项目健壮性和扩展性大大增强。
 
